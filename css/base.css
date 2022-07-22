@@ -370,22 +370,33 @@
 }
 
 #copy_icon_id {
-    font-size: xx-large;
+    font-size: 120%;
 }
 
 #copy_icon_link_id {
     padding-left: 1%;
+    text-decoration: none;
 }
 
 #copy_complete_icon_id {
-    font-size: xx-large;
+    font-size: 120%
 }
 
 #copy_complete_icon_link_id {
     padding-left: 1%;
+    text-decoration: none;
+}
+
+.copy_hint_class {
+    height: 50px;
 }
 
 #textarea_id {
     height: 200px;
     resize: none; 
+}
+
+#test_col_id {
+    text-align: center;
+    margin: 0 auto;
 }
