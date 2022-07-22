@@ -1,7 +1,4 @@
 jQuery(window).on("load", function(){
-    $("#preloader_id").delay(5000).fadeOut(500);
-    $("#main_id").addClass("show");
-
     $("html, body").animate({ scrollTop: 0 }, 0)
 
     var is_test_flag = false
