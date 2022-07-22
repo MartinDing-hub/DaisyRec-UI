@@ -1,3 +1,14 @@
+#logo-image_id {
+    height: 70%;
+    width: 28%;
+}
+
+#logo-name_id {
+    height: 65%;
+    width: 60%;
+    transform: translateX(2%);
+}
+
 #header-content_id {
     padding-left: 40px;
 }
