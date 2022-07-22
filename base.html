@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>daisyRec</title>
+
+    <!-- Favicon icon -->
+    <link href="css/sweetalert2.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet">
+
+    <link href="css/base.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Nav header start -->
+    <div class="nav-header" id="nav-header_id">
+        <a class="brand-logo" href="base.html" id="logo_id">
+            <img class="d-inline-block align-text-top" id="logo-image_id" src="./images/logo.png" width="235" height="70">
+        </a>
+    </div>
+    <!-- Nav header end -->
+
+    <!-- Header start -->
+    <div class="header" id="header_id">
+        <div class="header-content" id="header-content_id">
+            <h2 id="main_title_id"> daisyRec Command Generator</h2>
+        </div>
+    </div>
+    <!-- Header end -->
+
+    <!-- Sidebar start -->
+    <div class="quixnav" id="sidebar_id">
+        <div class="quixnav-scroll" id="sidebar-scroll_id">
+            <ul class="metismenu" id="menu_id">
+                <a href="javascript:void()">
+                    <span class="nav-text">Main Menu</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li>
+                        <a href="javascript:void()" id="tune_command_option_id">
+                            <i class="bi bi-terminal" id="tune_command_icon_id"></i>
+                            <span id="tune_command_id">&nbsp;&nbsp;&nbsp;&nbsp;Fair HPO</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()" id="test_command_option_id">
+                            <i class="bi bi-terminal-plus" id="test_command_icon_id"></i>
+                            <span id="test_command_id">&nbsp;&nbsp;&nbsp;&nbsp;Fair Recommend</span>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar end -->
+
+    <!-- Content body start -->
+    <div class="content-body" id="content-body_id">
+        <div class="container-fluid" id="container-fluid_id">
+            <div class="row page-titles mx-0" id="page-title1_id">
+                <div class="welcome-text" id="basic-setting_id">
+                    <h4>Basic Settings</h4>
+                    <p class="mb-0">Place the mouse on * to get quick explaination; the detailed explanation of all parameters are available in the <a href="https://daisyrec.readthedocs.io/en/latest/index.html">DaisyRec-v2.0 documentation.</a></p>
+                </div>
+            </div>
+            
+            <!-- First card start -->
+            <div class="card">
+                <!-- Frame1 start -->
+                <div class="row row-cols-4">
+                    <!-- Optimization_metric start -->
+                    <div class="col" id="optimization_metric_id">
+                        <div class="card-body" id="optimization_metric_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">optimization_metric</label>
+                            </div>
+                            <select class="form-select" id="optimization_metric_selector_id">
+                                <option id="opt_metric_NDCG" value="ndcg">NDCG</option>
+                                <option id="opt_metric_Precision" value="precision">Precision</option>
+                                <option id="opt_metric_Recall" value="recall">Recall</option>
+                                <option id="opt_metric_HR" value="hr">HR</option>
+                                <option id="opt_metric_MAP" value="map">MAP</option>
+                                <option id="opt_metric_MRR" value="mrr">MRR</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- optimization_metric end -->
+
+                    <!-- Hyperopt_trail start -->
+                    <div class="col" id="hyperopt_trail_id">
+                        <div class="card-body" id="hyperopt_trail_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">hyperopt_trail</label>
+                            </div>
+                            <input type="text" class="form-control" id="hyperopt_trail_input_id">
+                            <p id="hyperopt_trail_warning_id">*Notice: Here must be an integer greater than or equal to 1.</p>
+                        </div>
+                    </div>
+                    <!-- Hyperopt_trail end -->
+
+                    <!-- Algo_name start -->
+                    <div class="col" id="algo_name_id">
+                        <div class="card-body" id="algo_name_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">algo_name</label>
+                            </div>
+                            <select class="form-select" id="algo_name_selector_id">
+                                <option id="alg_name_EASE" value="ease">EASE</option>
+                                <option id="alg_name_FM" value="fm">FM</option>
+                                <option id="alg_name_NFM" value="nfm">NFM</option>
+                                <option id="alg_name_NEUMF" value="neumf">NeuMF</option>
+                                <option id="alg_name_ItemKNN" value="itemknn">ItemKNN</option>
+                                <option id="alg_name_Item2Vec" value="item2vec">Item2Vec</option>
+                                <option id="alg_name_MF" value="mf">MF</option>
+                                <option id="alg_name_MostPop" value="mostpop">MostPop</option>
+                                <option id="alg_name_Multi-VAE" value="multi-vae">Multi-VAE</option>
+                                <option id="alg_name_NGCF" value="ngcf">NGCF</option>
+                                <option id="alg_name_PureSVD" value="puresvd">PureSVD</option>
+                                <option id="alg_name_SLIM" value="slim">SLIM</option>                       
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Algo_name end -->
+
+                    <!-- Dataset start -->
+                    <div class="col" id="dataset_id">
+                        <div class="card-body" id="dataset_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">dataset</label>
+                            </div>
+                            <select class="form-select" id="dataset_selector_id">
+                                <option id="dataset_Amazon-Book" value="amazon-book">Amazon-Book</option>
+                                <option id="dataset_Amazon-Cloth" value="amazon-cloth">Amazon-Cloth</option>
+                                <option id="dataset_Amazon-Electronic" value="amazon-electronic">Amazon-Electronic</option>
+                                <option id="dataset_Amazon-Music" value="amazon-music">Amazon-Music</option>
+                                <option id="dataset_Book-X" value="book-x">Book-X</option>
+                                <option id="dataset_CiteULike" value="citeulike">CiteULike</option>
+                                <option id="dataset_Epinions" value="epinions">Epinions</option>
+                                <option id="dataset_Last.fm" value="lastfm">Last.fm</option>
+                                <option id="dataset_ML-100k" value="ml-100k">ML-100k</option>
+                                <option id="dataset_ML-1m" value="ml-1m">ML-1m</option>
+                                <option id="dataset_ML-10m" value="ml-10m">ML-10m</option>
+                                <option id="dataset_ML-20m" value="ml-20m">ML-20m</option>
+                                <option id="dataset_Netflix" value="netflix">Netflix</option>
+                                <option id="dataset_Yelp" value="yelp">Yelp</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Dataset end -->
+
+                    <!-- Preprocessing strategy start -->
+                    <div class="col" id="preprocess_id">
+                        <div class="card-body" id="preprocess_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title" title="The data pre-processing strategy">prepro*</label>
+                            </div>
+                            <select class="form-select" id="preprocess_selector_id">
+                                <option id="preprocess_Origin" value="origin">Origin</option>
+                                <option id="preprocess_Core" value="core">Core</option>
+                                <option id="preprocess_Filter" value="filter">Filter</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Preprocessing strategy end -->
+
+                    <!-- Prepro_num start -->
+                    <div class="col" id="preprocess_number_id">
+                        <div class="card-body" id="preprocess_number_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title" title="The number of filters or cores">prepro_num*</label>
+                            </div>
+                            <input type="text" class="form-control" id="preprocess_number_input_id">
+                            <p class="wrong-input-hint" id="preprocess_number_warning_id">*Notice: Here must be an integer greater than or equal to 1.</p>
+                        </div>
+                    </div>
+                    <!-- Prepro_num end -->
+
+                    <!-- Top-K start -->
+                    <div class="col" id="topk_id">
+                        <div class="card-body" id="topk_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">topk</label>
+                            </div>
+                            <input type="text" class="form-control" id="topk_input_id">
+                            <p class="wrong-input-hint" id="topk_warning_id">*Notice: Here must be an integer greater than or equal to 1.</p>
+                        </div>
+                    </div>
+                    <!-- Top-K end -->
+
+                    <!-- Fold_num start -->
+                    <div class="col" id="fold_num_id">
+                        <div class="card-body" id="fold_num_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title" title="The fold number of cross-validation">fold_num*</label>
+                            </div>
+                            <input type="text" class="form-control" id="fold_num_input_id">
+                            <p class="wrong-input-hint" id="fold_num_warning_id">*Notice: Here must be an integer greater than or equal to 1.</p>
+                        </div>
+                    </div>
+                    <!-- Fold_num end -->
+
+                    <!-- Test_size start -->
+                    <div class="col" id="test_size_id">
+                        <div class="card-body" id="test_size_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title" title="In the range of (0,1), for example, 0.2 means retaining 20% of the data as test set.">test_size*</label>
+                            </div>
+                            <input type="text" class="form-control" id="test_size_input_id">
+                            <p class="wrong-input-hint" id="test_size_warning_id">*Notice: Here must be a real number between 0 and 1.</p>
+                        </div>
+                    </div>
+                    <!-- Test_size end -->
+
+                    <!-- Val_size start -->
+                    <div class="col" id="val_size_id">
+                        <div class="card-body" id="val_size_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title" title="In the range of (0,1), for example, 0.1 means retaining 10% of the training set as validatiaon set.">val_size*</label>
+                            </div>
+                            <input type="text" class="form-control" id="val_size_input_id">
+                            <p class="wrong-input-hint" id="val_size_warning_id">*Notice: Here must be a real number between 0 and 1.</p>
+                        </div>
+                    </div>
+                    <!-- Val_size end -->
+
+                    <!-- Cand_num start -->
+                    <div class="col" id="cand_num_id">
+                        <div class="card-body" id="cand_num_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title" title="The number of candidate items used for ranking.">cand_num*</label>
+                            </div>
+                            <input type="text" class="form-control" id="cand_num_input_id">
+                            <p class="wrong-input-hint" id="cand_num_warning_id">*Notice: Here must be an integer larger than 1000.</p>
+                        </div>
+                    </div>
+                    <!-- Cand_num end -->
+
+                    <!-- GPU start -->
+                    <div class="col" id="gpu_id">
+                        <div class="card-body" id="gpu_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">gpu</label>
+                            </div>
+                            <input type="text" class="form-control" id="gpu_input_id">
+                        </div>
+                    </div>
+                    <!-- GPU end -->
+
+                    <!-- Init_method start -->
+                    <div class="col" id="init_method_id">
+                        <div class="card-body" id="init_method_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">init_method</label>
+                            </div>
+                            <select class="form-select" id="init_method_selector_id">
+                                <option id="ini_method_Default" value="default">Default</option>
+                                <option id="ini_method_Normal" value="normal">Normal</option>
+                                <option id="ini_method_Uniform" value="uniform">Uniform</option>
+                                <option id="ini_method_Xavier_Normal" value="xavier_normal">Xavier_Normal</option>
+                                <option id="ini_method_Xavier_Uniform" value="xavier_uniform">Xavier_Uniform</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Init_method end -->
+
+                    <!-- Optimizer start -->
+                    <div class="col" id="optimizer_id">
+                        <div class="card-body" id="optimizer_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">optimizer</label>
+                            </div>
+                            <select class="form-select" id="optimizer_selector_id">
+                                <option id="optimizer_Default" value="default">Default</option>
+                                <option id="optimizer_AdaGrad" value="adagrad">AdaGrad</option>
+                                <option id="optimizer_Adam" value="adam">Adam</option>
+                                <option id="optimizer_RMSProp" value="rmsprop">RMSProp</option>
+                                <option id="optimizer_SGD" value="sgd">SGD</option>
+                                <option id="optimizer_Sparse_adam" value="sparse_adam">SparseAdam</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Optimizer end -->
+
+                    <!-- Early_stop start -->
+                    <div class="col" id="early_stop_id">
+                        <div class="card-body" id="early_stop_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">early_stop</label>
+                            </div>
+                            <select class="form-select" id="early_stop_selector_id">
+                                <option id="early_stop_True" value="True">True</option>
+                                <option id="early_stop_False" value="False">False</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Early_stop end -->
+
+                    <!-- Loss_type start -->
+                    <div class="col" id="loss_type_id">
+                        <div class="card-body" id="loss_type_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">loss_type</label>
+                            </div>
+                            <select class="form-select" id="loss_type_selector_id">
+                                <option id="loss_type_BPR" value="BPR">BPR (BPR Loss)</option>
+                                <option id="loss_type_CL" value="CL">CL (Cross-entropy Loss)</option>
+                                <option id="loss_type_HL" value="HL">HL (Hinge Loss)</option>
+                                <option id="loss_type_SL" value="SL">SL (Square error loss)</option>
+                                <option id="loss_type_TL" value="TL">TL (Top-1 Loss)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Loss_type end -->
+                </div>
+                <!-- Frame1 end -->
+
+                <!-- Frame2 start -->
+                <div class="row row-cols-2">
+                    <!-- Test_method start -->
+                    <div class="col" id="test_method_id">
+                        <div class="card-body" id="test_method_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">test_method</label>
+                            </div>
+                            <select class="form-select" id="test_method_selector_id">
+                                <option id="test_method_RLOO" value="rloo">RLOO (Random Leave-one-out)</option>
+                                <option id="test_method_RSBR" value="rsbr">RSBR (Random Split-by-ratio)</option>
+                                <option id="test_method_TLOO" value="tloo">TLOO (Time-aware Leave-one-out)</option>
+                                <option id="test_method_TSBR" value="tsbr">TSBR (Time-aware Split-by-ratio)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Test_method end -->
+
+                    <!-- Val_method start -->
+                    <div class="col" id="val_method_id">
+                        <div class="card-body" id="val_method_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">val_method</label>
+                            </div>
+                            <select class="form-select" id="val_method_selector_id">
+                                <option id="val_method_RLOO" value="rloo">RLOO (Random Leave-one-out)</option>
+                                <option id="val_method_RSBR" value="rsbr">RSBR (Random Split-by-ratio)</option>
+                                <option id="val_method_TLOO" value="tloo">TLOO (Time-aware Leave-one-out)</option>
+                                <option id="val_method_TSBR" value="tsbr">TSBR (Time-aware Split-by-ratio)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Val_method end -->
+
+                    <!-- Sample_method start -->
+                    <div class="col" id="sample_method_id">
+                        <div class="card-body" id="sample_method_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title">sample_method</label>
+                            </div>
+                            <select class="form-select" id="sample_method_selector_id">
+                                <option id="sam_method_Uniform" value="uniform">Uniform (Uniformly Sample)</option>
+                                <option id="sam_method_Low-Pop" value="low-pop">Low-Pop (Sampling popular items with low rank)</option>
+                                <option id="sam_method_High-Pop" value="high-pop">High-Pop (Sampling popular item with high rank)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Sample_method end -->
+
+                    <!-- Sample_ratio start -->
+                    <div class="col" id="sample_ratio_id">
+                        <div class="card-body" id="sample_ratio_card_body_id">
+                            <div class="mb-0">
+                                <label class="card-title" title="In the range of (0,1), to control the ratio of popularity sampling for the hybrid sampling strategy. For example, for the hybrid sampling strategy 'uniform + low-pop\', '–sample_ratio = 0.1' means 10% of the negative items are sampled via low-pop.">sample_ratio*</label>
+                            </div>
+                            <input type="text" class="form-control" id="sample_ratio_input_id">
+                            <p class="wrong-input-hint" id="sample_ratio_warning_id">*Notice: Here must be a real number between 0 and 1.</p>
+                        </div>
+                    </div>
+                    <!-- Sample_ratio end -->
+                </div>
+                <!-- Frame2 end -->
+                <div class="row row-cols-4">
+                    <div class="col" id="submit-btn1-box_id">
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <button type="button" class="btn btn-outline-primary" id="submit-btn1_id">Submit</button>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <!-- First card end -->
+
+            <div class="row page-titles mx-0" id="page-title2_id">
+                <div class="welcome-text" id="algo-specific-setting_id">
+                    <h4>Algorithm Specific Settings</h4>
+                    <p class="mb-0">Place the mouse on * to get quick explaination; the detailed explanation of all parameters are available in the <a href="https://daisyrec.readthedocs.io/en/latest/index.html">DaisyRec-v2.0 documentation.</a></p>
+                </div>
+            </div>
+
+            <!-- Second card start -->
+            <div class="card" id="second_card_id">
+                <!-- Frame3 start -->
+                <div class="row row-cols-1">
+                    <!-- batch_size start -->
+                    <div class="col" id="batch_size_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="batch_size_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="batch_size_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="batch_size_checkbox_id">batch_size (int)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="batch_size_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="batch_size_group_id">
+                                <div class="col" id="batch_size_tune1_id">
+                                    <label class="algo-subtitle" id="batch_size_min_title_id" title="Here must be an integer larger than 0 and less than maximum value.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="batch_size_min_input_id">
+                                    <p class="wrong-input-hint" id="batch_size_min_warning_id">*Notice: Here must be an integer larger than 0 and less than maximum value.</p>
+                                </div>
+                                <div class="col" id="batch_size_tune2_id">
+                                    <label class="algo-subtitle" id="batch_size_max_title_id" title="Here must be an integer larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="batch_size_max_input_id">
+                                    <p class="wrong-input-hint" id="batch_size_max_warning_id">*Notice: Here must be an integer larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="batch_size_tune3_id">
+                                    <label class="algo-subtitle" id="batch_size_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="batch_size_step_input_id">
+                                    <p class="wrong-input-hint" id="batch_size_step_warning_id">*Notice: Here must be an integer larger than 0 and less than the difference between max value and min value.</p>
+                                </div>
+                                <div class="col" id="batch_size_test_id">
+                                    <label class="algo-subtitle" id="batch_size_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="batch_size_value_input_id">
+                                    <p class="wrong-input-hint" id="batch_size_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- batch_size end -->
+
+                    <!-- latent_dim start -->
+                    <div class="col" id="latent_dim_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="latent_dim_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="latent_dim_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="latent_dim_checkbox_id">latent_dim (int)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="latent_dim_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="latent_dim_group_id">
+                                <div class="col" id="latent_dim_tune1_id">
+                                    <label class="algo-subtitle" id="latent_dim_min_title_id" title="Here must be an integer larger than 0 and less than maximum value.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="latent_dim_min_input_id">
+                                    <p class="wrong-input-hint" id="latent_dim_min_warning_id">*Notice: Here must be an integer larger than 0 and less than maximum value.</p>
+                                </div>
+                                <div class="col" id="latent_dim_tune2_id">
+                                    <label class="algo-subtitle" id="latent_dim_max_title_id" title="Here must be an integer larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="latent_dim_max_input_id">
+                                    <p class="wrong-input-hint" id="latent_dim_max_warning_id">*Notice: Here must be an integer larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="latent_dim_tune3_id">
+                                    <label class="algo-subtitle" id="latent_dim_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="latent_dim_step_input_id">
+                                    <p class="wrong-input-hint" id="latent_dim_step_warning_id">*Notice: Here must be an integer larger than 0 and less than the difference between max value and min value.</p>
+                                </div>
+                                <div class="col" id="latent_dim_test_id">
+                                    <label class="algo-subtitle" id="latent_dim_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="latent_dim_value_input_id">
+                                    <p class="wrong-input-hint" id="latent_dim_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- latent_dim end -->
+
+                    <!-- dropout start -->
+                    <div class="col" id="dropout_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="dropout_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="dropout_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="dropout_checkbox_id">dropout (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="dropout_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="dropout_group_id">
+                                <div class="col" id="dropout_tune1_id">
+                                    <label class="algo-subtitle" id="dropout_min_title_id" title="Here must be a real number between 0 and 1, and the value must less than 'max_dropout'.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="dropout_min_input_id">
+                                    <p class="wrong-input-hint" id="dropout_min_warning_id">*Notice: Here must be a real number between 0 and 1, and the value must less than 'max_dropout'.</p>
+                                </div>
+                                <div class="col" id="dropout_tune2_id">
+                                    <label class="algo-subtitle" id="dropout_max_title_id" title="Here must be a real number larger than minimum value, and it's range is between 0 and 1.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="dropout_max_input_id">
+                                    <p class="wrong-input-hint" id="dropout_max_warning_id">*Notice: Here must be a real number larger than minimum value, and it's range is between 0 and 1.</p>
+                                </div>
+                                <div class="col" id="dropout_tune3_id">
+                                    <label class="algo-subtitle" id="dropout_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="dropout_step_input_id">
+                                    <p class="wrong-input-hint" id="dropout_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="dropout_test_id">
+                                    <label class="algo-subtitle" id="dropout_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="dropout_value_input_id">
+                                    <p class="wrong-input-hint" id="dropout_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- dropout end -->
+
+                    <!-- lr start -->
+                    <div class="col" id="lr_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="lr_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="lr_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="lr_checkbox_id">lr (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="lr_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="lr_group_id">
+                                <div class="col" id="lr_tune1_id">
+                                    <label class="algo-subtitle" id="lr_min_title_id" title="Here must be a real number larger than 0.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="lr_min_input_id">
+                                    <p class="wrong-input-hint" id="lr_min_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="lr_tune2_id">
+                                    <label class="algo-subtitle" id="lr_max_title_id" title="Here must be a real number larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="lr_max_input_id">
+                                    <p class="wrong-input-hint" id="lr_max_warning_id">*Notice: Here must be a real number larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="lr_tune3_id">
+                                    <label class="algo-subtitle" id="lr_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="lr_step_input_id">
+                                    <p class="wrong-input-hint" id="lr_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="lr_test_id">
+                                    <label class="algo-subtitle" id="lr_step_value_id">Value</label>
+                                    <input type="text" class="form-control" id="lr_value_input_id">
+                                    <p class="wrong-input-hint" id="lr_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- lr end -->
+
+                    <!-- anneal_cap start -->
+                    <div class="col" id="anneal_cap_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="anneal_cap_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="anneal_cap_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="anneal_cap_checkbox_id">anneal_cap (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="anneal_cap_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="anneal_cap_group_id">
+                                <div class="col" id="anneal_cap_tune1_id">
+                                    <label class="algo-subtitle" id="anneal_cap_min_title_id" title="Here must be a real number larger than 0.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="anneal_cap_min_input_id">
+                                    <p class="wrong-input-hint" id="anneal_cap_min_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="anneal_cap_tune2_id">
+                                    <label class="algo-subtitle" id="anneal_cap_max_title_id" title="Here must be a real number larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="anneal_cap_max_input_id">
+                                    <p class="wrong-input-hint" id="anneal_cap_max_warning_id">*Notice: Here must be a real number larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="anneal_cap_tune3_id">
+                                    <label class="algo-subtitle" id="anneal_cap_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="anneal_cap_step_input_id">
+                                    <p class="wrong-input-hint" id="anneal_cap_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="anneal_cap_test_id">
+                                    <label class="algo-subtitle" id="anneal_cap_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="anneal_cap_value_input_id">
+                                    <p class="wrong-input-hint" id="anneal_cap_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- anneal_cap end -->
+
+                    <!-- factors start -->
+                    <div class="col" id="factors_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="factors_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="factors_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="factors_checkbox_id">factors (int)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="factors_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="factors_group_id">
+                                <div class="col" id="factors_tune1_id">
+                                    <label class="algo-subtitle" id="factors_min_title_id" title="Here must be an integer larger than 0.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="factors_min_input_id">
+                                    <p class="wrong-input-hint" id="factors_min_warning_id">*Notice: Here must be an integer larger than 0 and less than maximum value.</p>
+                                </div>
+                                <div class="col" id="factors_tune2_id">
+                                    <label class="algo-subtitle" id="factors_max_title_id" title="Here must be an integer larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="factors_max_input_id">
+                                    <p class="wrong-input-hint" id="factors_max_warning_id">*Notice: Here must be an integer larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="factors_tune3_id">
+                                    <label class="algo-subtitle" id="factors_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="factors_step_input_id">
+                                    <p class="wrong-input-hint" id="factors_step_warning_id">*Notice: Here must be an integer larger than 0 and less than the difference between max value and min value.</p>
+                                </div>
+                                <div class="col" id="factors_test_id">
+                                    <label class="algo-subtitle" id="factors_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="factors_value_input_id">
+                                    <p class="wrong-input-hint" id="factors_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- factors end -->
+
+                    <!-- num_ng start -->
+                    <div class="col" id="num_ng_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="num_ng_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="num_ng_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="num_ng_checkbox_id">num_ng (int)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="num_ng_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="num_ng_group_id">
+                                <div class="col" id="num_ng_tune1_id">
+                                    <label class="algo-subtitle" id="num_ng_min_title_id" title="Here must be an integer larger than 0.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="num_ng_min_input_id">
+                                    <p class="wrong-input-hint" id="num_ng_min_warning_id">*Notice: Here must be an integer larger than 0 and less than maximum value.</p>
+                                </div>
+                                <div class="col" id="num_ng_tune2_id">
+                                    <label class="algo-subtitle" id="num_ng_max_title_id" title="Here must be an integer larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="num_ng_max_input_id">
+                                    <p class="wrong-input-hint" id="num_ng_max_warning_id">*Notice: Here must be an integer larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="num_ng_tune3_id">
+                                    <label class="algo-subtitle" id="num_ng_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="num_ng_step_input_id">
+                                    <p class="wrong-input-hint" id="num_ng_step_warning_id">*Notice: Here must be an integer larger than 0 and less than the difference between max value and min value.</p>
+                                </div>
+                                <div class="col" id="num_ng_test_id">
+                                    <label class="algo-subtitle" id="num_ng_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="num_ng_value_input_id">
+                                    <p class="wrong-input-hint" id="num_ng_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- num_ng end -->
+
+                    <!-- node_dropout start -->
+                    <div class="col" id="node_dropout_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="node_dropout_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="node_dropout_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="node_dropout_checkbox_id">node_dropout (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="node_dropout_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="node_dropout_group_id">
+                                <div class="col" id="node_dropout_tune1_id">
+                                    <label class="algo-subtitle" id="node_dropout_min_title_id" title="Here must be a real number between 0 and 1.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="node_dropout_min_input_id">
+                                    <p class="wrong-input-hint" id="node_dropout_min_warning_id">*Notice: Here must be a real number between 0 and 1.</p>
+                                </div>
+                                <div class="col" id="node_dropout_tune2_id">
+                                    <label class="algo-subtitle" id="node_dropout_max_title_id" title="Here must be a real number larger than minimum value, and it's range is between 0 and 1.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="node_dropout_max_input_id">
+                                    <p class="wrong-input-hint" id="node_dropout_max_warning_id">*Notice: Here must be a real number larger than minimum value, and it's range is between 0 and 1.</p>
+                                </div>
+                                <div class="col" id="node_dropout_tune3_id">
+                                    <label class="algo-subtitle" id="node_dropout_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="node_dropout_step_input_id">
+                                    <p class="wrong-input-hint" id="node_dropout_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="node_dropout_test_id">
+                                    <label class="algo-subtitle" id="node_dropout_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="node_dropout_value_input_id">
+                                    <p class="wrong-input-hint" id="node_dropout_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- node_dropout end -->
+
+                    <!-- mess_dropout start -->
+                    <div class="col" id="mess_dropout_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="mess_dropout_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="mess_dropout_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="mess_dropout_checkbox_id">mess_dropout (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="mess_dropout_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="mess_dropout_group_id">
+                                <div class="col" id="mess_dropout_tune1_id">
+                                    <label class="algo-subtitle" id="mess_dropout_min_title_id" title="Here must be a real number between 0 and 1.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="mess_dropout_min_input_id">
+                                    <p class="wrong-input-hint" id="mess_dropout_min_warning_id">*Notice: Here must be a real number between 0 and 1.</p>
+                                </div>
+                                <div class="col" id="mess_dropout_tune2_id">
+                                    <label class="algo-subtitle" id="mess_dropout_max_title_id" title="Here must be a real number larger than minimum value, and it's range is between 0 and 1.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="mess_dropout_max_input_id">
+                                    <p class="wrong-input-hint" id="mess_dropout_max_warning_id">*Notice: Here must be a real number larger than minimum value, and it's range is between 0 and 1.</p>
+                                </div>
+                                <div class="col" id="mess_dropout_tune3_id">
+                                    <label class="algo-subtitle" id="mess_dropout_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="mess_dropout_step_input_id">
+                                    <p class="wrong-input-hint" id="mess_dropout_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="mess_dropout_test_id">
+                                    <label class="algo-subtitle" id="mess_dropout_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="mess_dropout_value_input_id">
+                                    <p class="wrong-input-hint" id="mess_dropout_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mess_dropout end -->
+
+                    <!-- reg_1 start -->
+                    <div class="col" id="reg1_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="reg1_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="reg1_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="reg1_checkbox_id">reg_1 (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="reg1_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="reg1_group_id">
+                                <div class="col" id="reg1_tune1_id">
+                                    <label class="algo-subtitle" id="reg1_min_title_id" title="Here must be a real number larger than 0.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="reg1_min_input_id">
+                                    <p class="wrong-input-hint" id="reg1_min_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="reg1_tune2_id">
+                                    <label class="algo-subtitle" id="reg1_max_title_id" title="Here must be a real number larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="reg1_max_input_id">
+                                    <p class="wrong-input-hint" id="reg1_max_warning_id">*Notice: Here must be a real number larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="reg1_tune3_id">
+                                    <label class="algo-subtitle" id="reg1_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="reg1_step_input_id">
+                                    <p class="wrong-input-hint" id="reg1_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="reg1_test_id">
+                                    <label class="algo-subtitle" id="reg1_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="reg1_value_input_id">
+                                    <p class="wrong-input-hint" id="reg1_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- reg_1 end -->
+
+                    <!-- reg_2 start -->
+                    <div class="col" id="reg2_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="reg2_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="reg2_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="reg2_checkbox_id">reg_2 (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="reg2_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="reg2_group_id">
+                                <div class="col" id="reg2_tune1_id">
+                                    <label class="algo-subtitle" id="reg2_min_title_id" title="Here must be a real number larger than 0.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="reg2_min_input_id">
+                                    <p class="wrong-input-hint" id="reg2_min_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="reg2_tune2_id">
+                                    <label class="algo-subtitle" id="reg2_max_title_id" title="Here must be a real number larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="reg2_max_input_id">
+                                    <p class="wrong-input-hint" id="reg2_max_warning_id">*Notice: Here must be a real number larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="reg2_tune3_id">
+                                    <label class="algo-subtitle" id="reg2_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="reg2_step_input_id">
+                                    <p class="wrong-input-hint" id="reg2_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="reg2_test_id">
+                                    <label class="algo-subtitle" id="reg2_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="reg2_value_input_id">
+                                    <p class="wrong-input-hint" id="reg2_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- reg_2 start -->
+
+                    <!-- num_layers start -->
+                    <div class="col" id="num_layers_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="num_layers_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="num_layers_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="num_layers_checkbox_id">num_layers (int)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="num_layers_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="num_layers_group_id">
+                                <div class="col" id="num_layers_tune1_id">
+                                    <label class="algo-subtitle" id="num_layers_min_title_id" title="Here must be an integer larger than 0 and less than maximum value.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="num_layers_min_input_id">
+                                    <p class="wrong-input-hint" id="num_layers_min_warning_id">*Notice: Here must be an integer larger than 0 and less than maximum value.</p>
+                                </div>
+                                <div class="col" id="num_layers_tune2_id">
+                                    <label class="algo-subtitle" id="num_layers_max_title_id" title="Here must be an integer larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="num_layers_max_input_id">
+                                    <p class="wrong-input-hint" id="num_layers_max_warning_id">*Notice: Here must be an integer larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="num_layers_tune3_id">
+                                    <label class="algo-subtitle" id="num_layers_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="num_layers_step_input_id">
+                                    <p class="wrong-input-hint" id="num_layers_step_warning_id">*Notice: Here must be an integer larger than 0 and less than the difference between max value and min value.</p>
+                                </div>
+                                <div class="col" id="num_layers_test_id">
+                                    <label class="algo-subtitle" id="num_layers_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="num_layers_value_input_id">
+                                    <p class="wrong-input-hint" id="num_layers_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- num_layers end -->
+
+                    <!-- maxk start -->
+                    <div class="col" id="maxk_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="maxk_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="maxk_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="maxk_checkbox_id">maxk (int)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="maxk_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="maxk_group_id">
+                                <div class="col" id="maxk_tune1_id">
+                                    <label class="algo-subtitle" id="maxk_min_title_id" title="Here must be an integer larger than 0 and less than maximum value.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="maxk_min_input_id">
+                                    <p class="wrong-input-hint" id="maxk_min_warning_id">*Notice: Here must be an integer larger than 0 and less than maximum value.</p>
+                                </div>
+                                <div class="col" id="maxk_tune2_id">
+                                    <label class="algo-subtitle" id="maxk_max_title_id" title="Here must be an integer larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="maxk_max_input_id">
+                                    <p class="wrong-input-hint" id="maxk_max_warning_id">*Notice: Here must be an integer larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="maxk_tune3_id">
+                                    <label class="algo-subtitle" id="maxk_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="maxk_step_input_id">
+                                    <p class="wrong-input-hint" id="maxk_step_warning_id">*Notice: Here must be an integer larger than 0 and less than the difference between max value and min value.</p>
+                                </div>
+                                <div class="col" id="maxk_test_id">
+                                    <label class="algo-subtitle" id="maxk_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="maxk_value_input_id">
+                                    <p class="wrong-input-hint" id="maxk_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- maxk end -->
+
+                    <!-- alpha start -->
+                    <div class="col" id="alpha_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="alpha_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="alpha_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="alpha_checkbox_id">alpha (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="alpha_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="alpha_group_id">
+                                <div class="col" id="alpha_tune1_id">
+                                    <label class="algo-subtitle" id="alpha_min_title_id" title="Here must be a real number larger than 0.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="alpha_min_input_id">
+                                    <p class="wrong-input-hint" id="alpha_min_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="alpha_tune2_id">
+                                    <label class="algo-subtitle" id="alpha_max_title_id" title="Here must be a real number larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="alpha_max_input_id">
+                                    <p class="wrong-input-hint" id="alpha_max_warning_id">*Notice: Here must be a real number larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="alpha_tune3_id">
+                                    <label class="algo-subtitle" id="alpha_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="alpha_step_input_id">
+                                    <p class="wrong-input-hint" id="alpha_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="alpha_test_id">
+                                    <label class="algo-subtitle" id="alpha_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="alpha_value_input_id">
+                                    <p class="wrong-input-hint" id="alpha_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- alpha end -->
+
+                    <!-- elastic start -->
+                    <div class="col" id="elastic_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="elastic_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="elastic_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="elastic_checkbox_id">elastic (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="elastic_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="elastic_group_id">
+                                <div class="col" id="elastic_tune1_id">
+                                    <label class="algo-subtitle" id="elastic_min_title_id" title="Here must be a real number between 0 and 1.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="elastic_min_input_id">
+                                    <p class="wrong-input-hint" id="elastic_min_warning_id">*Notice: Here must be a real number between 0 and 1.</p>
+                                </div>
+                                <div class="col" id="elastic_tune2_id">
+                                    <label class="algo-subtitle" id="elastic_max_title_id" title="Here must be a real number larger than minimum value, and it's range is between 0 and 1.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="elastic_max_input_id">
+                                    <p class="wrong-input-hint" id="elastic_max_warning_id">*Notice: Here must be a real number larger than minimum value, and it's range is between 0 and 1.</p>
+                                </div>
+                                <div class="col" id="elastic_tune3_id">
+                                    <label class="algo-subtitle" id="elastic_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="elastic_step_input_id">
+                                    <p class="wrong-input-hint" id="elastic_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="elastic_test_id">
+                                    <label class="algo-subtitle" id="elastic_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="elastic_value_input_id">
+                                    <p class="wrong-input-hint" id="elastic_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- elastic end -->
+
+                    <!-- context_window start -->
+                    <div class="col" id="context_window_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="context_window_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="context_window_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="context_window_checkbox_id">context_window (int)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="context_window_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="context_window_group_id">
+                                <div class="col" id="context_window_tune1_id">
+                                    <label class="algo-subtitle" id="context_window_min_title_id" title="Here must be an integer larger than 0 and less than maximum value.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="context_window_min_input_id">
+                                    <p class="wrong-input-hint" id="context_window_min_warning_id">*Notice: Here must be an integer larger than 0 and less than maximum value.</p>
+                                </div>
+                                <div class="col" id="context_window_tune2_id">
+                                    <label class="algo-subtitle" id="context_window_max_title_id" title="Here must be an integer larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="context_window_max_input_id">
+                                    <p class="wrong-input-hint" id="context_window_max_warning_id">*Notice: Here must be an integer larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="context_window_tune3_id">
+                                    <label class="algo-subtitle" id="context_window_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="context_window_step_input_id">
+                                    <p class="wrong-input-hint" id="context_window_step_warning_id">*Notice: Here must be an integer larger than 0 and less than the difference between max value and min value.</p>
+                                </div>
+                                <div class="col" id="context_window_test_id">
+                                    <label class="algo-subtitle" id="context_window_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="context_window_value_input_id">
+                                    <p class="wrong-input-hint" id="context_window_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- context_window end -->
+
+                    <!-- rho start -->
+                    <div class="col" id="rho_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="rho_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="rho_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="rho_checkbox_id">rho (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="rho_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="rho_group_id">
+                                <div class="col" id="rho_tune1_id">
+                                    <label class="algo-subtitle" id="rho_min_title_id" title="Here must be a real number between 0 and 1.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="rho_min_input_id">
+                                    <p class="wrong-input-hint" id="rho_min_warning_id">*Notice: Here must be a real number between 0 and 1.</p>
+                                </div>
+                                <div class="col" id="rho_tune2_id">
+                                    <label class="algo-subtitle" id="rho_max_title_id" title="Here must be a real number larger than minimum value, and it's range is between 0 and 1.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="rho_max_input_id">
+                                    <p class="wrong-input-hint" id="rho_max_warning_id">*Notice: Here must be a real number larger than minimum value, and it's range is between 0 and 1.</p>
+                                </div>
+                                <div class="col" id="rho_tune3_id">
+                                    <label class="algo-subtitle" id="rho_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="rho_step_input_id">
+                                    <p class="wrong-input-hint" id="rho_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="rho_test_id">
+                                    <label class="algo-subtitle" id="rho_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="rho_value_input_id">
+                                    <p class="wrong-input-hint" id="rho_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- rho end -->
+
+                    <!-- reg start -->
+                    <div class="col" id="reg_id">
+                        <div class="card-body">
+                            <div class="pretty p-svg p-curve">
+                                <input id="reg_checkbox_id" type="checkbox" />
+                                <div class="state p-success">
+                                    <svg class="svg svg-icon" viewBox="0 0 20 20" id="reg_img_id">
+                                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                                    </svg>
+                                    <label class="card-title" id="reg_checkbox_id">reg (float)</label>
+                                </div>
+                            </div>
+                            <div class="space_cls" id="reg_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row row-cols-4" id="reg_group_id">
+                                <div class="col" id="reg_tune1_id">
+                                    <label class="algo-subtitle" id="reg_min_title_id" title="Here must be a real number larger than 0.">Min. Value*</label>
+                                    <input type="text" class="form-control" id="reg_min_input_id">
+                                    <p class="wrong-input-hint" id="reg_min_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="reg_tune2_id">
+                                    <label class="algo-subtitle" id="reg_max_title_id" title="Here must be a real number larger than minimum value.">Max. Value*</label>
+                                    <input type="text" class="form-control" id="reg_max_input_id">
+                                    <p class="wrong-input-hint" id="reg_max_warning_id">*Notice: Here must be a real number larger than minimum value.</p>
+                                </div>
+                                <div class="col" id="reg_tune3_id">
+                                    <label class="algo-subtitle" id="reg_step_title_id">Step</label>
+                                    <input type="text" class="form-control" id="reg_step_input_id">
+                                    <p class="wrong-input-hint" id="reg_step_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                                <div class="col" id="reg_test_id">
+                                    <label class="algo-subtitle" id="reg_value_title_id">Value</label>
+                                    <input type="text" class="form-control" id="reg_value_input_id">
+                                    <p class="wrong-input-hint" id="reg_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- reg end -->
+                </div>
+                <!-- Frame3 end -->
+                <div class="row row-cols-4">
+                    <div class="col" id="submit-btn2-box_id">
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <button type="button" class="btn btn-outline-primary" id="submit-btn2_id">Submit</button>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Second card end -->
+
+            <div class="row page-titles mx-0" id="page-title3_id">
+                <div class="welcome-text" id="command_result_id">
+                    <h4>Command Result</h4>
+                </div>
+            </div>
+
+            <!-- Third card start -->
+            <div class="card" id="third_card_id">
+                <!-- Frame4 start -->
+                <div class="row row-cols-1">
+                    <div class="col">
+                        <textarea class="form-control" id="textarea_id"></textarea>
+                    </div>
+                </div>
+                <!-- Frame4 end -->
+            </div>
+            <!-- Third card end -->
+        </div>
+    </div>
+    <!-- Content body end -->
+
+    <!-- Required vendors -->
+    <script type="text/javascript" src="vendor/global.min.js"></script>
+    <script type="text/javascript" src="js/custom.min.js"></script>
+    <script type="text/javascript" src="js/quixnav-init.js"></script>
+    <script type="text/javascript" src="./vendor/sweetalert2.min.js"></script>
+
+    <script type="text/javascript" src="js/base.js"></script>
+</body>
+</html>
