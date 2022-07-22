@@ -362,6 +362,23 @@
     margin-block-end: 0;
 }
 
+#copy_icon_id {
+    font-size: xx-large;
+}
+
+#copy_icon_link_id {
+    padding-left: 1%;
+}
+
+#copy_complete_icon_id {
+    font-size: xx-large;
+}
+
+#copy_complete_icon_link_id {
+    padding-left: 1%;
+}
+
 #textarea_id {
     height: 200px;
+    resize: none; 
 }

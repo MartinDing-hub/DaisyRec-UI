@@ -209,6 +209,8 @@ $(document).ready(function(){
 
     $("#page-title3_id").hide()
     $("#third_card_id").hide()
+    $("#copy_icon_link_id").show()
+    $("#copy_complete_icon_link_id").hide()
     $("#textarea_id").attr("readonly", "readonly")
     
     // Check whether link "tune_command" has been clicked
@@ -442,6 +444,8 @@ $(document).ready(function(){
 
         $("#page-title3_id").hide()
         $("#third_card_id").hide()
+        $("#copy_icon_link_id").hide()
+        $("#copy_complete_icon_link_id").hide()
         $("#textarea_id").attr("readonly", "readonly")
 
         $("html, body").animate({ scrollTop: 0 }, 0)
@@ -995,7 +999,7 @@ $(document).ready(function(){
         
                     $("#batch_size_min_input_id").val(128)
                     $("#batch_size_max_input_id").val(512)
-                    $("#batch_size_step_input_id").val(1)
+                    $("#batch_size_step_input_id").val()
 
                     $("#batch_size_min_warning_id").hide()
                     $("#batch_size_max_warning_id").hide()
@@ -1018,7 +1022,7 @@ $(document).ready(function(){
         
                     $("#latent_dim_min_input_id").val(64)
                     $("#latent_dim_max_input_id").val(256)
-                    $("#latent_dim_step_input_id").val(1)
+                    $("#latent_dim_step_input_id").val()
 
                     $("#latent_dim_min_warning_id").hide()
                     $("#latent_dim_max_warning_id").hide()
@@ -1110,7 +1114,7 @@ $(document).ready(function(){
         
                     $("#factors_min_input_id").val(20)
                     $("#factors_max_input_id").val(100)
-                    $("#factors_step_input_id").val(1)
+                    $("#factors_step_input_id").val()
 
                     $("#factors_min_warning_id").hide()
                     $("#factors_max_warning_id").hide()
@@ -1133,7 +1137,7 @@ $(document).ready(function(){
         
                     $("#num_ng_min_input_id").val(1)
                     $("#num_ng_max_input_id").val(4)
-                    $("#num_ng_step_input_id").val(1)
+                    $("#num_ng_step_input_id").val()
 
                     $("#num_ng_min_warning_id").hide()
                     $("#num_ng_max_warning_id").hide()
@@ -1248,7 +1252,7 @@ $(document).ready(function(){
 
                     $("#num_layers_min_input_id").val(1)
                     $("#num_layers_max_input_id").val(3)
-                    $("#num_layers_step_input_id").val(1)
+                    $("#num_layers_step_input_id").val()
 
                     $("#num_layers_min_warning_id").hide()
                     $("#num_layers_max_warning_id").hide()
@@ -1340,7 +1344,7 @@ $(document).ready(function(){
 
                     $("#context_window_min_input_id").val(1)
                     $("#context_window_max_input_id").val(2)
-                    $("#context_window_step_input_id").val(1)
+                    $("#context_window_step_input_id").val()
 
                     $("#context_window_min_warning_id").hide()
                     $("#context_window_max_warning_id").hide()
@@ -3649,6 +3653,8 @@ $(document).ready(function(){
 
         $("#page-title3_id").hide()
         $("#third_card_id").hide()
+        $("#copy_icon_link_id").hide()
+        $("#copy_complete_icon_link_id").hide()
         $("#textarea_id").attr("readonly", "readonly")
 
         $("html, body").animate({ scrollTop: 0 }, 0)
@@ -5594,7 +5600,7 @@ $(document).ready(function(){
 
                 $("#batch_size_min_input_id").val(128)
                 $("#batch_size_max_input_id").val(512)
-                $("#batch_size_step_input_id").val(1)
+                $("#batch_size_step_input_id").val()
 
                 $("#batch_size_min_warning_id").hide()
                 $("#batch_size_max_warning_id").hide()
@@ -5617,7 +5623,7 @@ $(document).ready(function(){
 
                 $("#latent_dim_min_input_id").val(64)
                 $("#latent_dim_max_input_id").val(256)
-                $("#latent_dim_step_input_id").val(1)
+                $("#latent_dim_step_input_id").val()
 
                 $("#latent_dim_min_warning_id").hide()
                 $("#latent_dim_max_warning_id").hide()
@@ -5709,7 +5715,7 @@ $(document).ready(function(){
 
                 $("#factors_min_input_id").val(20)
                 $("#factors_max_input_id").val(100)
-                $("#factors_step_input_id").val(1)
+                $("#factors_step_input_id").val()
 
                 $("#factors_min_warning_id").hide()
                 $("#factors_max_warning_id").hide()
@@ -5732,7 +5738,7 @@ $(document).ready(function(){
 
                 $("#num_ng_min_input_id").val(1)
                 $("#num_ng_max_input_id").val(4)
-                $("#num_ng_step_input_id").val(1)
+                $("#num_ng_step_input_id").val()
 
                 $("#num_ng_min_warning_id").hide()
                 $("#num_ng_max_warning_id").hide()
@@ -5847,7 +5853,7 @@ $(document).ready(function(){
 
                 $("#num_layers_min_input_id").val(1)
                 $("#num_layers_max_input_id").val(3)
-                $("#num_layers_step_input_id").val(1)
+                $("#num_layers_step_input_id").val()
 
                 $("#num_layers_min_warning_id").hide()
                 $("#num_layers_max_warning_id").hide()
@@ -5870,7 +5876,7 @@ $(document).ready(function(){
 
                 $("#maxk_min_input_id").val(30)
                 $("#maxk_max_input_id").val(60)
-                $("#maxk_step_input_id").val(1)
+                $("#maxk_step_input_id").val()
 
                 $("#maxk_min_warning_id").hide()
                 $("#maxk_max_warning_id").hide()
@@ -5939,7 +5945,7 @@ $(document).ready(function(){
 
                 $("#context_window_min_input_id").val(1)
                 $("#context_window_max_input_id").val(2)
-                $("#context_window_step_input_id").val(1)
+                $("#context_window_step_input_id").val()
 
                 $("#context_window_size_min_warning_id").hide()
                 $("#context_window_max_warning_id").hide()
@@ -8562,6 +8568,9 @@ $(document).ready(function(){
                 $("#reg_step_input_id").attr("Disabled", "Disabled")
                 $("#reg_value_input_id").attr("Disabled", "Disabled")
 
+                $("#copy_icon_link_id").show()
+                $("#copy_complete_icon_link_id").hide()
+
                 if (is_test_flag) {
                     // Generate fair_rec python command
                     var fair_rec_string = "python fair_rec.py "
@@ -9173,6 +9182,9 @@ $(document).ready(function(){
             $("#reg_step_input_id").attr("Disabled", false)
             $("#reg_value_input_id").attr("Disabled", false)
 
+            $("#copy_icon_link_id").hide()
+            $("#copy_complete_icon_link_id").hide()
+
             $("#textarea_id").val("")
 
             setTimeout(function () {
@@ -9181,4 +9193,21 @@ $(document).ready(function(){
             }, 10);
         }
     });
+
+    // The function used to copy the python command to clipboard
+    function copyToClipboard(text_content) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val(text_content).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
+
+    $("#copy_icon_link_id").click(function () {
+        $("#copy_icon_link_id").hide()
+        $("#copy_complete_icon_link_id").show()
+
+        var python_command = $("#textarea_id").val()
+        copyToClipboard(python_command)
+    })
 })
