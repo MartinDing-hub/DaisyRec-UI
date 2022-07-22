@@ -41,6 +41,13 @@
     color: cornflowerblue;
 }
 
+#copy_success_alert_id {
+    position: fixed;
+    width: fit-content;
+    left: 45%;
+    z-index: 1000;
+}
+
 #page-title1_id {
     padding-left: 0%;
     height: 1%;

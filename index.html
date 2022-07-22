@@ -63,6 +63,10 @@
     <!-- Content body start -->
     <div class="content-body" id="content-body_id">
         <div class="container-fluid" id="container-fluid_id">
+            <div class="alert alert-success" id="copy_success_alert_id">
+                <strong>Success:</strong> The Python command has been copied to clipboard.
+            </div>
+
             <div class="row page-titles mx-0" id="page-title1_id">
                 <div class="welcome-text" id="basic-setting_id">
                     <h4>Basic Settings</h4>
@@ -1127,13 +1131,13 @@
                 <!-- Frame4 start -->
                 <div class="row row-cols-1">
                     <div class="col">
+                        <textarea class="form-control" id="textarea_id"></textarea>
                         <a href="javascript:void()" id="copy_icon_link_id">
                             <i class="bi bi-clipboard-check" id="copy_icon_id"></i>
                         </a>
                         <a href="javascript:void()" id="copy_complete_icon_link_id">
                             <i class="bi bi-clipboard-check-fill" id="copy_complete_icon_id"></i>
                         </a>
-                        <textarea class="form-control" id="textarea_id"></textarea>
                     </div>
                 </div>
                 <!-- Frame4 end -->
