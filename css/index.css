@@ -14,7 +14,7 @@
 }
 
 #tune_command_option_id {
-    padding-left: 10%;
+    padding-left: 25%;
 }
 
 #tune_command_icon_id {
@@ -28,7 +28,7 @@
 }
 
 #test_command_option_id {
-    padding-left: 10%;
+    padding-left: 25%;
 }
 
 #test_command_icon_id {
@@ -116,6 +116,14 @@
     font-weight: bold;
 }
 
+#batch_size_int_checkbox_id {
+    font-size: auto;
+}
+
+#batch_size_int_choice_checkbox_id {
+    font-size: auto;
+}
+
 #batch_size_title_id {
     margin-block-end: 0;
 }
@@ -128,6 +136,14 @@
 #latent_dim_checkbox_id {
     font-size: auto;
     font-weight: bold;
+}
+
+#latent_dim_int_checkbox_id {
+    font-size: auto;
+}
+
+#latent_dim_int_choice_checkbox_id {
+    font-size: auto;
 }
 
 #latent_dim_title_id {
@@ -144,6 +160,14 @@
     font-weight: bold;
 }
 
+#dropout_float_checkbox_id {
+    font-size: auto;
+}
+
+#dropout_float_choice_checkbox_id {
+    font-size: auto;
+}
+
 #dropout_title_id {
     margin-block-end: 0;
 }
@@ -156,6 +180,14 @@
 #lr_checkbox_id {
     font-size: auto;
     font-weight: bold;
+}
+
+#lr_float_checkbox_id {
+    font-size: auto;
+}
+
+#lr_float_choice_checkbox_id {
+    font-size: auto;
 }
 
 #lr_title_id {
@@ -172,6 +204,14 @@
     font-weight: bold;
 }
 
+#anneal_cap_float_checkbox_id {
+    font-size: auto;
+}
+
+#anneal_cap_float_choice_checkbox_id {
+    font-size: auto;
+}
+
 #anneal_cap_title_id {
     margin-block-end: 0;
 }
@@ -184,6 +224,14 @@
 #factors_checkbox_id {
     font-size: auto;
     font-weight: bold;
+}
+
+#factors_int_checkbox_id {
+    font-size: auto;
+}
+
+#factors_int_choice_checkbox_id {
+    font-size: auto;
 }
 
 #factors_title_id {
@@ -200,6 +248,14 @@
     font-weight: bold;
 }
 
+#num_ng_int_checkbox_id {
+    font-size: auto;
+}
+
+#num_ng_int_choice_checkbox_id {
+    font-size: auto;
+}
+
 #num_ng_title_id {
     margin-block-end: 0;
 }
@@ -212,6 +268,14 @@
 #node_dropout_checkbox_id {
     font-size: auto;
     font-weight: bold;
+}
+
+#node_dropout_float_checkbox_id {
+    font-size: auto;
+}
+
+#node_dropout_float_choice_checkbox_id {
+    font-size: auto;
 }
 
 #node_dropout_title_id {
@@ -228,6 +292,14 @@
     font-weight: bold;
 }
 
+#mess_dropout_float_checkbox_id {
+    font-size: auto;
+}
+
+#mess_dropout_float_choice_checkbox_id {
+    font-size: auto;
+}
+
 #mess_dropout_title_id {
     margin-block-end: 0;
 }
@@ -240,6 +312,14 @@
 #reg1_checkbox_id {
     font-size: auto;
     font-weight: bold;
+}
+
+#reg1_float_checkbox_id {
+    font-size: auto;
+}
+
+#reg1_float_choice_checkbox_id {
+    font-size: auto;
 }
 
 #reg1_title_id {
@@ -256,6 +336,14 @@
     font-weight: bold;
 }
 
+#reg2_float_checkbox_id {
+    font-size: auto;
+}
+
+#reg2_float_choice_checkbox_id {
+    font-size: auto;
+}
+
 #reg2_title_id {
     margin-block-end: 0;
 }
@@ -268,6 +356,14 @@
 #num_layers_checkbox_id {
     font-size: auto;
     font-weight: bold;
+}
+
+#num_layers_int_checkbox_id {
+    font-size: auto;
+}
+
+#num_layers_int_choice_checkbox_id {
+    font-size: auto;
 }
 
 #num_layers_title_id {
@@ -284,6 +380,14 @@
     font-weight: bold;
 }
 
+#maxk_int_checkbox_id {
+    font-size: auto;
+}
+
+#maxk_int_choice_checkbox_id {
+    font-size: auto;
+}
+
 #maxk_title_id {
     margin-block-end: 0;
 }
@@ -296,6 +400,14 @@
 #alpha_checkbox_id {
     font-size: auto;
     font-weight: bold;
+}
+
+#alpha_float_checkbox_id {
+    font-size: auto;
+}
+
+#alpha_float_choice_checkbox_id {
+    font-size: auto;
 }
 
 #alpha_title_id {
@@ -312,6 +424,14 @@
     font-weight: bold;
 }
 
+#elastic_float_checkbox_id {
+    font-size: auto;
+}
+
+#elastic_float_choice_checkbox_id {
+    font-size: auto;
+}
+
 #elastic_title_id {
     margin-block-end: 0;
 }
@@ -324,6 +444,14 @@
 #context_window_checkbox_id {
     font-size: auto;
     font-weight: bold;
+}
+
+#context_window_int_checkbox_id {
+    font-size: auto;
+}
+
+#context_window_int_choice_checkbox_id {
+    font-size: auto;
 }
 
 #context_window_title_id {
@@ -340,6 +468,14 @@
     font-weight: bold;
 }
 
+#rho_float_checkbox_id {
+    font-size: auto;
+}
+
+#rho_float_choice_checkbox_id {
+    font-size: auto;
+}
+
 #rho_title_id {
     margin-block-end: 0;
 }
@@ -352,6 +488,14 @@
 #reg_checkbox_id {
     font-size: auto;
     font-weight: bold;
+}
+
+#reg_float_checkbox_id {
+    font-size: auto;
+}
+
+#reg_float_choice_checkbox_id {
+    font-size: auto;
 }
 
 #reg_title_id {

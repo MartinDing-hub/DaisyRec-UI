@@ -17,7 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet">
 
-    <link href="./css/base.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
 </head>
 <body>
     <!-- Preloader start -->
@@ -44,7 +44,7 @@
         <!-- Header start -->
         <div class="header" id="header_id">
             <div class="header-content" id="header-content_id">
-                <h2 id="main_title_id"> daisyRec Command Generator</h2>
+                <h2 id="main_title_id">Command Generator</h2>
             </div>
         </div>
         <!-- Header end -->
@@ -60,13 +60,13 @@
                         <li>
                             <a href="javascript:void()" id="tune_command_option_id">
                                 <i class="bi bi-terminal" id="tune_command_icon_id"></i>
-                                <span id="tune_command_id">&nbsp;&nbsp;&nbsp;&nbsp;Fair HPO</span>
+                                <span id="tune_command_id">&nbsp;&nbsp;&nbsp;&nbsp;TUNE</span>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void()" id="test_command_option_id">
                                 <i class="bi bi-terminal-plus" id="test_command_icon_id"></i>
-                                <span id="test_command_id">&nbsp;&nbsp;&nbsp;&nbsp;Fair Recommend</span>
+                                <span id="test_command_id">&nbsp;&nbsp;&nbsp;&nbsp;TEST</span>
                             </a>
                         </li>
                     </ul>
@@ -431,7 +431,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="batch_size_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="batch_size_checkbox_id">batch_size (int)</label>
+                                        <label class="card-title" id="batch_size_checkbox_id">batch_size</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="batch_size_int_id">
+                                    <input id="batch_size_int_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="batch_size_int_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="batch_size_int_checkbox_id">int</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="batch_size_int_choice_id">
+                                    <input id="batch_size_int_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="batch_size_int_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="batch_size_int_choice_checkbox_id">int choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="batch_size_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -457,6 +471,13 @@
                                         <p class="wrong-input-hint" id="batch_size_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="batch_size_choice_group_id">
+                                    <div class="col" id="batch_size_choice_value_id">
+                                        <label class="algo-subtitle" id="batch_size_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="batch_size_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="batch_size_choice_value_warning_id">*Notice: All the three value should be <strong>integer</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- batch_size end -->
@@ -470,7 +491,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="latent_dim_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="latent_dim_checkbox_id">latent_dim (int)</label>
+                                        <label class="card-title" id="latent_dim_checkbox_id">latent_dim</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="latent_dim_int_id">
+                                    <input id="latent_dim_int_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="latent_dim_int_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="latent_dim_int_checkbox_id">int</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="latent_dim_int_choice_id">
+                                    <input id="latent_dim_int_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="latent_dim_int_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="latent_dim_int_choice_checkbox_id">int choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="latent_dim_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -496,6 +531,13 @@
                                         <p class="wrong-input-hint" id="latent_dim_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="latent_dim_choice_group_id">
+                                    <div class="col" id="latent_dim_choice_value_id">
+                                        <label class="algo-subtitle" id="latent_dim_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="latent_dim_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="latent_dim_choice_value_warning_id">*Notice: All the three value should be <strong>integer</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- latent_dim end -->
@@ -509,7 +551,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="dropout_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="dropout_checkbox_id">dropout (float)</label>
+                                        <label class="card-title" id="dropout_checkbox_id">dropout</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="dropout_float_id">
+                                    <input id="dropout_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="dropout_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="dropout_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="dropout_float_choice_id">
+                                    <input id="dropout_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="dropout_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="dropout_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="dropout_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -535,6 +591,13 @@
                                         <p class="wrong-input-hint" id="dropout_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="dropout_choice_group_id">
+                                    <div class="col" id="dropout_choice_value_id">
+                                        <label class="algo-subtitle" id="dropout_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="dropout_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="dropout_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- dropout end -->
@@ -548,7 +611,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="lr_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="lr_checkbox_id">lr (float)</label>
+                                        <label class="card-title" id="lr_checkbox_id">lr</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="lr_float_id">
+                                    <input id="lr_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="lr_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="lr_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="lr_float_choice_id">
+                                    <input id="lr_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="lr_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="lr_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="lr_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -574,6 +651,13 @@
                                         <p class="wrong-input-hint" id="lr_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="lr_choice_group_id">
+                                    <div class="col" id="lr_choice_value_id">
+                                        <label class="algo-subtitle" id="lr_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="lr_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="lr_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- lr end -->
@@ -587,7 +671,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="anneal_cap_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="anneal_cap_checkbox_id">anneal_cap (float)</label>
+                                        <label class="card-title" id="anneal_cap_checkbox_id">anneal_cap</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="anneal_cap_float_id">
+                                    <input id="anneal_cap_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="anneal_cap_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="anneal_cap_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="anneal_cap_float_choice_id">
+                                    <input id="anneal_cap_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="anneal_cap_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="anneal_cap_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="anneal_cap_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -613,6 +711,13 @@
                                         <p class="wrong-input-hint" id="anneal_cap_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="anneal_cap_choice_group_id">
+                                    <div class="col" id="anneal_cap_choice_value_id">
+                                        <label class="algo-subtitle" id="anneal_cap_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="anneal_cap_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="anneal_cap_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- anneal_cap end -->
@@ -626,7 +731,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="factors_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="factors_checkbox_id">factors (int)</label>
+                                        <label class="card-title" id="factors_checkbox_id">factors</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="factors_int_id">
+                                    <input id="factors_int_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="factors_int_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="factors_int_checkbox_id">int</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="factors_int_choice_id">
+                                    <input id="factors_int_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="factors_int_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="factors_int_choice_checkbox_id">int choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="factors_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -652,6 +771,13 @@
                                         <p class="wrong-input-hint" id="factors_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="factors_choice_group_id">
+                                    <div class="col" id="factors_choice_value_id">
+                                        <label class="algo-subtitle" id="factors_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="factors_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="factors_choice_value_warning_id">*Notice: All the three value should be <strong>integer</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- factors end -->
@@ -665,7 +791,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="num_ng_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="num_ng_checkbox_id">num_ng (int)</label>
+                                        <label class="card-title" id="num_ng_checkbox_id">num_ng</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="num_ng_int_id">
+                                    <input id="num_ng_int_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="num_ng_int_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="num_ng_int_checkbox_id">int</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="num_ng_int_choice_id">
+                                    <input id="num_ng_int_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="num_ng_int_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="num_ng_int_choice_checkbox_id">int choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="num_ng_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -691,6 +831,13 @@
                                         <p class="wrong-input-hint" id="num_ng_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="num_ng_choice_group_id">
+                                    <div class="col" id="num_ng_choice_value_id">
+                                        <label class="algo-subtitle" id="num_ng_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="num_ng_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="num_ng_choice_value_warning_id">*Notice: All the three value should be <strong>integer</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- num_ng end -->
@@ -704,7 +851,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="node_dropout_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="node_dropout_checkbox_id">node_dropout (float)</label>
+                                        <label class="card-title" id="node_dropout_checkbox_id">node_dropout</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="node_dropout_float_id">
+                                    <input id="node_dropout_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="node_dropout_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="node_dropout_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="node_dropout_float_choice_id">
+                                    <input id="node_dropout_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="node_dropout_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="node_dropout_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="node_dropout_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -730,6 +891,13 @@
                                         <p class="wrong-input-hint" id="node_dropout_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="node_dropout_choice_group_id">
+                                    <div class="col" id="node_dropout_choice_value_id">
+                                        <label class="algo-subtitle" id="node_dropout_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="node_dropout_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="node_dropout_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- node_dropout end -->
@@ -743,7 +911,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="mess_dropout_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="mess_dropout_checkbox_id">mess_dropout (float)</label>
+                                        <label class="card-title" id="mess_dropout_checkbox_id">mess_dropout</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="mess_dropout_float_id">
+                                    <input id="mess_dropout_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="mess_dropout_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="mess_dropout_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="mess_dropout_float_choice_id">
+                                    <input id="mess_dropout_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="mess_dropout_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="mess_dropout_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="mess_dropout_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -769,6 +951,13 @@
                                         <p class="wrong-input-hint" id="mess_dropout_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="mess_dropout_choice_group_id">
+                                    <div class="col" id="mess_dropout_choice_value_id">
+                                        <label class="algo-subtitle" id="mess_dropout_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="mess_dropout_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="mess_dropout_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- mess_dropout end -->
@@ -782,7 +971,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="reg1_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="reg1_checkbox_id">reg_1 (float)</label>
+                                        <label class="card-title" id="reg1_checkbox_id">reg_1</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="reg1_float_id">
+                                    <input id="reg1_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="reg1_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="reg1_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="reg1_float_choice_id">
+                                    <input id="reg1_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="reg1_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="reg1_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="reg1_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -808,6 +1011,13 @@
                                         <p class="wrong-input-hint" id="reg1_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="reg1_choice_group_id">
+                                    <div class="col" id="reg1_choice_value_id">
+                                        <label class="algo-subtitle" id="reg1_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="reg1_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="reg1_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- reg_1 end -->
@@ -821,7 +1031,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="reg2_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="reg2_checkbox_id">reg_2 (float)</label>
+                                        <label class="card-title" id="reg2_checkbox_id">reg_2</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="reg2_float_id">
+                                    <input id="reg2_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="reg2_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="reg2_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="reg2_float_choice_id">
+                                    <input id="reg2_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="reg2_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="reg2_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="reg2_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -847,6 +1071,13 @@
                                         <p class="wrong-input-hint" id="reg2_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="reg2_choice_group_id">
+                                    <div class="col" id="reg2_choice_value_id">
+                                        <label class="algo-subtitle" id="reg2_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="reg2_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="reg2_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- reg_2 start -->
@@ -860,7 +1091,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="num_layers_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="num_layers_checkbox_id">num_layers (int)</label>
+                                        <label class="card-title" id="num_layers_checkbox_id">num_layers</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="num_layers_int_id">
+                                    <input id="num_layers_int_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="num_layers_int_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="num_layers_int_checkbox_id">int</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="num_layers_int_choice_id">
+                                    <input id="num_layers_int_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="num_layers_int_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="num_layers_int_choice_checkbox_id">int choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="num_layers_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -886,6 +1131,13 @@
                                         <p class="wrong-input-hint" id="num_layers_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="num_layers_choice_group_id">
+                                    <div class="col" id="num_layers_choice_value_id">
+                                        <label class="algo-subtitle" id="num_layers_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="num_layers_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="num_layers_choice_value_warning_id">*Notice: All the three value should be <strong>integer</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- num_layers end -->
@@ -899,7 +1151,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="maxk_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="maxk_checkbox_id">maxk (int)</label>
+                                        <label class="card-title" id="maxk_checkbox_id">maxk</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="maxk_int_id">
+                                    <input id="maxk_int_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="maxk_int_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="maxk_int_checkbox_id">int</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="maxk_int_choice_id">
+                                    <input id="maxk_int_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="maxk_int_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="maxk_int_choice_checkbox_id">int choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="maxk_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -925,6 +1191,13 @@
                                         <p class="wrong-input-hint" id="maxk_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="maxk_choice_group_id">
+                                    <div class="col" id="maxk_choice_value_id">
+                                        <label class="algo-subtitle" id="maxk_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="maxk_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="maxk_choice_value_warning_id">*Notice: All the three value should be <strong>integer</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- maxk end -->
@@ -938,7 +1211,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="alpha_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="alpha_checkbox_id">alpha (float)</label>
+                                        <label class="card-title" id="alpha_checkbox_id">alpha</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="alpha_float_id">
+                                    <input id="alpha_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="alpha_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="alpha_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="alpha_float_choice_id">
+                                    <input id="alpha_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="alpha_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="alpha_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="alpha_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -964,6 +1251,13 @@
                                         <p class="wrong-input-hint" id="alpha_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="alpha_choice_group_id">
+                                    <div class="col" id="alpha_choice_value_id">
+                                        <label class="algo-subtitle" id="alpha_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="alpha_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="alpha_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- alpha end -->
@@ -977,7 +1271,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="elastic_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="elastic_checkbox_id">elastic (float)</label>
+                                        <label class="card-title" id="elastic_checkbox_id">elastic</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="elastic_float_id">
+                                    <input id="elastic_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="elastic_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="elastic_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="elastic_float_choice_id">
+                                    <input id="elastic_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="elastic_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="elastic_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="elastic_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -1003,6 +1311,13 @@
                                         <p class="wrong-input-hint" id="elastic_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="elastic_choice_group_id">
+                                    <div class="col" id="elastic_choice_value_id">
+                                        <label class="algo-subtitle" id="elastic_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="elastic_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="elastic_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- elastic end -->
@@ -1016,7 +1331,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="context_window_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="context_window_checkbox_id">context_window (int)</label>
+                                        <label class="card-title" id="context_window_checkbox_id">context_window</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="context_window_int_id">
+                                    <input id="context_window_int_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="context_window_int_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="context_window_int_checkbox_id">int</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="context_window_int_choice_id">
+                                    <input id="context_window_int_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="context_window_int_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="context_window_int_choice_checkbox_id">int choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="context_window_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -1042,6 +1371,13 @@
                                         <p class="wrong-input-hint" id="context_window_value_warning_id">*Notice: Here must be an integer larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="context_window_choice_group_id">
+                                    <div class="col" id="context_window_choice_value_id">
+                                        <label class="algo-subtitle" id="context_window_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="context_window_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="context_window_choice_value_warning_id">*Notice: All the three value should be <strong>integer</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- context_window end -->
@@ -1055,7 +1391,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="rho_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="rho_checkbox_id">rho (float)</label>
+                                        <label class="card-title" id="rho_checkbox_id">rho</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="rho_float_id">
+                                    <input id="rho_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="rho_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="rho_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="rho_float_choice_id">
+                                    <input id="rho_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="rho_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="rho_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="rho_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -1081,6 +1431,13 @@
                                         <p class="wrong-input-hint" id="rho_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
                                     </div>
                                 </div>
+                                <div class="row row-cols-2" id="rho_choice_group_id">
+                                    <div class="col" id="rho_choice_value_id">
+                                        <label class="algo-subtitle" id="rho_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="rho_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="rho_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- rho end -->
@@ -1094,7 +1451,21 @@
                                         <svg class="svg svg-icon" viewBox="0 0 20 20" id="reg_img_id">
                                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
                                         </svg>
-                                        <label class="card-title" id="reg_checkbox_id">reg (float)</label>
+                                        <label class="card-title" id="reg_checkbox_id">reg</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="reg_float_id">
+                                    <input id="reg_float_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="reg_float_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="reg_float_checkbox_id">float</label>
+                                    </div>
+                                </div>
+                                <div class="pretty p-svg p-plain p-bigger p-smooth" id="reg_float_choice_id">
+                                    <input id="reg_float_choice_checkbox_id" type="checkbox" />
+                                    <div class="state">
+                                        <img class="svg" id="reg_float_choice_icon_id" src="https://lokesh-coder.github.io/pretty-checkbox/svg/feathers/check-circle.svg"/>
+                                        <label id="reg_float_choice_checkbox_id">float choice</label>
                                     </div>
                                 </div>
                                 <div class="space_cls" id="reg_space_id">&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -1118,6 +1489,13 @@
                                         <label class="algo-subtitle" id="reg_value_title_id">Value</label>
                                         <input type="text" class="form-control" id="reg_value_input_id">
                                         <p class="wrong-input-hint" id="reg_value_warning_id">*Notice: Here must be a real number larger than 0.</p>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-2" id="reg_choice_group_id">
+                                    <div class="col" id="reg_choice_value_id">
+                                        <label class="algo-subtitle" id="reg_choice_value_title_id">Value</label>
+                                        <input type="text" class="form-control" id="reg_choice_value_input_id">
+                                        <p class="wrong-input-hint" id="reg_choice_value_warning_id">*Notice: All the three value should be <strong>float</strong>, and they must be separated by ",".</p>
                                     </div>
                                 </div>
                             </div>
@@ -1172,6 +1550,6 @@
     <script type="text/javascript" src="./js/quixnav-init.js"></script>
     <script type="text/javascript" src="./vendor/sweetalert2.min.js"></script>
 
-    <script type="text/javascript" src="./js/base.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </body>
 </html>
