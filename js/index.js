@@ -53,6 +53,7 @@ jQuery(window).on("load", function(){
         $("#alg_name_InfAE").show()
         $("#alg_name_ItemKNN").show()
         $("#alg_name_Item2Vec").show()
+        $("#alg_name_LightGCN").show()
         $("#alg_name_MF").show()
         $("#alg_name_MostPop").hide()
         $("#alg_name_Multi-VAE").show()
@@ -400,6 +401,7 @@ jQuery(window).on("load", function(){
             $("#alg_name_InfAE").show()
             $("#alg_name_ItemKNN").show()
             $("#alg_name_Item2Vec").show()
+            $("#alg_name_LightGCN").show()
             $("#alg_name_MF").show()
             $("#alg_name_MostPop").hide()
             $("#alg_name_Multi-VAE").show()
@@ -935,12 +937,13 @@ jQuery(window).on("load", function(){
         /* Part 1 */
         // Changes will happen when "Algo_name" is set
         $("#algo_name_selector_id").change(function(){
-            // If choose "FM", "NFM", "NeuMF", "MF" or "NGCF"
+            // If choose "FM", "NFM", "NeuMF", "MF", "NGCF" or "LightGCN"
             if ($("#algo_name_selector_id").val() == "fm" || 
                     $("#algo_name_selector_id").val() == "nfm" || 
                     $("#algo_name_selector_id").val() == "neumf" || 
                     $("#algo_name_selector_id").val() == "mf" || 
-                    $("#algo_name_selector_id").val() == "ngcf"){
+                    $("#algo_name_selector_id").val() == "ngcf" ||
+                    $("#algo_name_selector_id").val() == "lightgcn"){
                 // Changes in "Loss_type" selector
                 $("#loss_type_selector_id").attr("Disabled", false);
                 $("#loss_type_BPR").show()
@@ -979,7 +982,7 @@ jQuery(window).on("load", function(){
                 $("#optimizer_selector_id").attr("Disabled", "Disabled")
                 $("#init_method_selector_id").val("")
                 $("#optimizer_selector_id").val("")
-            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE" or "NGCF"
+            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE", "NGCF" or "LightGCN"
             } else if ($("#algo_name_selector_id").val() == "fm" || 
                     $("#algo_name_selector_id").val() == "nfm" || 
                     $("#algo_name_selector_id").val() == "neumf" || 
@@ -987,7 +990,8 @@ jQuery(window).on("load", function(){
                     $("#algo_name_selector_id").val() == "item2vec" || 
                     $("#algo_name_selector_id").val() == "mf" || 
                     $("#algo_name_selector_id").val() == "multi-vae" || 
-                    $("#algo_name_selector_id").val() == "ngcf") {
+                    $("#algo_name_selector_id").val() == "ngcf" || 
+                    $("#algo_name_selector_id").val() == "lightgcn") {
                 // Changes in "Init_method" selector and "Optimizer" selector
                 $("#init_method_selector_id").attr("Disabled", false)
                 $("#optimizer_selector_id").attr("Disabled", false)
@@ -1015,12 +1019,13 @@ jQuery(window).on("load", function(){
         /* Part 3 */
         // Changes will happen when "Algo_name" is set
         $("#algo_name_selector_id").change(function(){
-            // If choose "FM", "NFM", "NeuMF", "MF" or "NGCF"
+            // If choose "FM", "NFM", "NeuMF", "MF", "NGCF" or "LightGCN"
             if ($("#algo_name_selector_id").val() == "fm" || 
                     $("#algo_name_selector_id").val() == "nfm" || 
                     $("#algo_name_selector_id").val() == "neumf" || 
                     $("#algo_name_selector_id").val() == "mf" || 
-                    $("#algo_name_selector_id").val() == "ngcf"){
+                    $("#algo_name_selector_id").val() == "ngcf" ||
+                    $("#algo_name_selector_id").val() == "lightgcn"){
                 // Changes in "Sample_method" selector
                 $("#sample_method_selector_id").attr("Disabled", false)
                 $("#sam_method_Uniform").show()
@@ -1092,7 +1097,7 @@ jQuery(window).on("load", function(){
                 // Changes in "GPU" input box
                 $("#gpu_input_id").attr("Disabled", "Disabled")
                 $("#gpu_input_id").val("")
-            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE" or "NGCF"
+            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE", "NGCF" or "LightGCN"
             } else if ($("#algo_name_selector_id").val() == "fm" || 
                     $("#algo_name_selector_id").val() == "nfm" || 
                     $("#algo_name_selector_id").val() == "neumf" || 
@@ -1100,7 +1105,8 @@ jQuery(window).on("load", function(){
                     $("#algo_name_selector_id").val() == "item2vec" || 
                     $("#algo_name_selector_id").val() == "mf" || 
                     $("#algo_name_selector_id").val() == "multi-vae" || 
-                    $("#algo_name_selector_id").val() == "ngcf") {
+                    $("#algo_name_selector_id").val() == "ngcf" || 
+                    $("#algo_name_selector_id").val() == "lightgcn") {
                 // Changes in "GPU" input box
                 $("#gpu_input_id").attr("Disabled", false)
                 $("#gpu_input_id").val("0")
@@ -1119,7 +1125,7 @@ jQuery(window).on("load", function(){
                 // Changes in "Early_stop" selector
                 $("#early_stop_selector_id").attr("Disabled", "Disabled")
                 $("#early_stop_selector_id").val("")
-            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE" or "NGCF"
+            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE", "NGCF" or "LightGCN"
             } else if ($("#algo_name_selector_id").val() == "fm" || 
                     $("#algo_name_selector_id").val() == "nfm" || 
                     $("#algo_name_selector_id").val() == "neumf" || 
@@ -1127,7 +1133,8 @@ jQuery(window).on("load", function(){
                     $("#algo_name_selector_id").val() == "item2vec" || 
                     $("#algo_name_selector_id").val() == "mf" || 
                     $("#algo_name_selector_id").val() == "multi-vae" || 
-                    $("#algo_name_selector_id").val() == "ngcf") {
+                    $("#algo_name_selector_id").val() == "ngcf" || 
+                    $("#algo_name_selector_id").val() == "lightgcn") {
                 // Changes in "Early_stop" selector
                 $("#early_stop_selector_id").attr("Disabled", false)
                 $("#early_stop_selector_id").val("True")
@@ -2940,6 +2947,27 @@ jQuery(window).on("load", function(){
                 $("#reg_id").hide()
             // If choose "NGCF"
             } else if ($("#algo_name_selector_id").val() == "ngcf") {
+                // Changes in Algorithm Specific Setting
+                $("#batch_size_id").show()
+                $("#latent_dim_id").hide()
+                $("#dropout_id").hide()
+                $("#lr_id").show()
+                $("#anneal_cap_id").hide()
+                $("#factors_id").show()
+                $("#num_ng_id").show()
+                $("#node_dropout_id").show()
+                $("#mess_dropout_id").show()
+                $("#reg1_id").show()
+                $("#reg2_id").show()
+                $("#num_layers_id").hide()
+                $("#maxk_id").hide()
+                $("#alpha_id").hide()
+                $("#elastic_id").hide()
+                $("#context_window_id").hide()
+                $("#rho_id").hide()
+                $("#reg_id").hide()
+            // If choose "LightGCN"
+            } else if ($("#algo_name_selector_id").val() == "lightgcn") {
                 // Changes in Algorithm Specific Setting
                 $("#batch_size_id").show()
                 $("#latent_dim_id").hide()
@@ -5444,6 +5472,7 @@ jQuery(window).on("load", function(){
             $("#alg_name_MostPop").show()
             $("#alg_name_Multi-VAE").show()
             $("#alg_name_NGCF").show()
+            $("#alg_name_LightGCN").show()
             $("#alg_name_PureSVD").show()
             $("#alg_name_SLIM").show()
         $("#dataset_selector_id").val("ml-100k")
@@ -5769,12 +5798,13 @@ jQuery(window).on("load", function(){
         /* Part 1 */
         // Changes will happen when "Algo_name" is set
         $("#algo_name_selector_id").change(function(){
-            // If choose "FM", "NFM", "NeuMF", "MF" or "NGCF"
+            // If choose "FM", "NFM", "NeuMF", "MF", "NGCF" or "LightGCN"
             if ($("#algo_name_selector_id").val() == "fm" || 
                     $("#algo_name_selector_id").val() == "nfm" || 
                     $("#algo_name_selector_id").val() == "neumf" || 
                     $("#algo_name_selector_id").val() == "mf" || 
-                    $("#algo_name_selector_id").val() == "ngcf"){
+                    $("#algo_name_selector_id").val() == "ngcf" || 
+                    $("#algo_name_selector_id").val() == "lightgcn"){
                 // Changes in "Loss_type" selector
                 $("#loss_type_selector_id").attr("Disabled", false);
                 $("#loss_type_BPR").show()
@@ -5813,7 +5843,7 @@ jQuery(window).on("load", function(){
                 $("#optimizer_selector_id").attr("Disabled", "Disabled")
                 $("#init_method_selector_id").val("")
                 $("#optimizer_selector_id").val("")
-            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE" or "NGCF"
+            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE", "NGCF" or "LightGCN"
             } else if ($("#algo_name_selector_id").val() == "fm" || 
                     $("#algo_name_selector_id").val() == "nfm" || 
                     $("#algo_name_selector_id").val() == "neumf" || 
@@ -5821,7 +5851,8 @@ jQuery(window).on("load", function(){
                     $("#algo_name_selector_id").val() == "item2vec" || 
                     $("#algo_name_selector_id").val() == "mf" || 
                     $("#algo_name_selector_id").val() == "multi-vae" || 
-                    $("#algo_name_selector_id").val() == "ngcf") {
+                    $("#algo_name_selector_id").val() == "ngcf" || 
+                    $("#algo_name_selector_id").val() == "lightgcn") {
                 // Changes in "Init_method" selector and "Optimizer" selector
                 $("#init_method_selector_id").attr("Disabled", false)
                 $("#optimizer_selector_id").attr("Disabled", false)
@@ -5849,12 +5880,13 @@ jQuery(window).on("load", function(){
         /* Part 3 */
         // Changes will happen when "Algo_name" is set
         $("#algo_name_selector_id").change(function(){
-            // If choose "FM", "NFM", "NeuMF", "MF" or "NGCF"
+            // If choose "FM", "NFM", "NeuMF", "MF", "NGCF" or "LightGCN"
             if ($("#algo_name_selector_id").val() == "fm" || 
                     $("#algo_name_selector_id").val() == "nfm" || 
                     $("#algo_name_selector_id").val() == "neumf" || 
                     $("#algo_name_selector_id").val() == "mf" || 
-                    $("#algo_name_selector_id").val() == "ngcf"){
+                    $("#algo_name_selector_id").val() == "ngcf" || 
+                    $("#algo_name_selector_id").val() == "lightgcn"){
                 // Changes in "Sample_method" selector
                 $("#sample_method_selector_id").attr("Disabled", false)
                 $("#sam_method_Uniform").show()
@@ -5926,7 +5958,7 @@ jQuery(window).on("load", function(){
                 // Changes in "GPU" input box
                 $("#gpu_input_id").attr("Disabled", "Disabled")
                 $("#gpu_input_id").val("")
-            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE" or "NGCF"
+            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE", "NGCF" or "LightGCN"
             } else if ($("#algo_name_selector_id").val() == "fm" || 
                     $("#algo_name_selector_id").val() == "nfm" || 
                     $("#algo_name_selector_id").val() == "neumf" || 
@@ -5934,7 +5966,8 @@ jQuery(window).on("load", function(){
                     $("#algo_name_selector_id").val() == "item2vec" || 
                     $("#algo_name_selector_id").val() == "mf" || 
                     $("#algo_name_selector_id").val() == "multi-vae" || 
-                    $("#algo_name_selector_id").val() == "ngcf") {
+                    $("#algo_name_selector_id").val() == "ngcf" || 
+                    $("#algo_name_selector_id").val() == "lightgcn") {
                 // Changes in "GPU" input box
                 $("#gpu_input_id").attr("Disabled", false)
                 $("#gpu_input_id").val("0")
@@ -5953,7 +5986,7 @@ jQuery(window).on("load", function(){
                 // Changes in "Early_stop" selector
                 $("#early_stop_selector_id").attr("Disabled", "Disabled")
                 $("#early_stop_selector_id").val("")
-            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE" or "NGCF"
+            // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE", "NGCF" or "LightGCN"
             } else if ($("#algo_name_selector_id").val() == "fm" || 
                     $("#algo_name_selector_id").val() == "nfm" || 
                     $("#algo_name_selector_id").val() == "neumf" || 
@@ -5961,7 +5994,8 @@ jQuery(window).on("load", function(){
                     $("#algo_name_selector_id").val() == "item2vec" || 
                     $("#algo_name_selector_id").val() == "mf" || 
                     $("#algo_name_selector_id").val() == "multi-vae" || 
-                    $("#algo_name_selector_id").val() == "ngcf") {
+                    $("#algo_name_selector_id").val() == "ngcf" || 
+                    $("#algo_name_selector_id").val() == "lightgcn") {
                 // Changes in "Early_stop" selector
                 $("#early_stop_selector_id").attr("Disabled", false)
                 $("#early_stop_selector_id").val("True")
@@ -7145,12 +7179,13 @@ jQuery(window).on("load", function(){
     /* Part 1 */
     // Changes will happen when "Algo_name" is set
     $("#algo_name_selector_id").change(function(){
-        // If choose "FM", "NFM", "NeuMF", "MF" or "NGCF"
+        // If choose "FM", "NFM", "NeuMF", "MF", "NGCF" or "LightGCN"
         if ($("#algo_name_selector_id").val() == "fm" || 
                 $("#algo_name_selector_id").val() == "nfm" || 
                 $("#algo_name_selector_id").val() == "neumf" || 
                 $("#algo_name_selector_id").val() == "mf" || 
-                $("#algo_name_selector_id").val() == "ngcf"){
+                $("#algo_name_selector_id").val() == "ngcf" || 
+                $("#algo_name_selector_id").val() == "lightgcn"){
             // Changes in "Loss_type" selector
             $("#loss_type_selector_id").attr("Disabled", false)
             $("#loss_type_BPR").show()
@@ -7189,7 +7224,7 @@ jQuery(window).on("load", function(){
             $("#optimizer_selector_id").attr("Disabled", "Disabled")
             $("#init_method_selector_id").val("")
             $("#optimizer_selector_id").val("")
-        // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE" or "NGCF"
+        // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE", "NGCF" or "LightGCN"
         } else if ($("#algo_name_selector_id").val() == "fm" || 
                 $("#algo_name_selector_id").val() == "nfm" || 
                 $("#algo_name_selector_id").val() == "neumf" || 
@@ -7197,7 +7232,8 @@ jQuery(window).on("load", function(){
                 $("#algo_name_selector_id").val() == "item2vec" || 
                 $("#algo_name_selector_id").val() == "mf" || 
                 $("#algo_name_selector_id").val() == "multi-vae" || 
-                $("#algo_name_selector_id").val() == "ngcf") {
+                $("#algo_name_selector_id").val() == "ngcf" || 
+                $("#algo_name_selector_id").val() == "lightgcn") {
             // Changes in "Init_method" selector and "Optimizer" selector
             $("#init_method_selector_id").attr("Disabled", false)
             $("#optimizer_selector_id").attr("Disabled", false)
@@ -7225,12 +7261,13 @@ jQuery(window).on("load", function(){
     /* Part 3 */
     // Changes will happen when "Algo_name" is set
     $("#algo_name_selector_id").change(function(){
-        // If choose "FM", "NFM", "NeuMF", "MF" or "NGCF"
+        // If choose "FM", "NFM", "NeuMF", "MF", "NGCF" or "LightGCN"
         if ($("#algo_name_selector_id").val() == "fm" || 
                 $("#algo_name_selector_id").val() == "nfm" || 
                 $("#algo_name_selector_id").val() == "neumf" || 
                 $("#algo_name_selector_id").val() == "mf" || 
-                $("#algo_name_selector_id").val() == "ngcf"){
+                $("#algo_name_selector_id").val() == "ngcf" || 
+                $("#algo_name_selector_id").val() == "lightgcn"){
             // Changes in "Sample_method" selector
             $("#sample_method_selector_id").attr("Disabled", false)
             $("#sam_method_Uniform").show()
@@ -7302,7 +7339,7 @@ jQuery(window).on("load", function(){
             // Changes in "GPU" input box
             $("#gpu_input_id").attr("Disabled", "Disabled")
             $("#gpu_input_id").val("")
-        // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE" or "NGCF"
+        // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE", "NGCF" or "LightGCN"
         } else if ($("#algo_name_selector_id").val() == "fm" || 
                 $("#algo_name_selector_id").val() == "nfm" || 
                 $("#algo_name_selector_id").val() == "neumf" || 
@@ -7310,7 +7347,8 @@ jQuery(window).on("load", function(){
                 $("#algo_name_selector_id").val() == "item2vec" || 
                 $("#algo_name_selector_id").val() == "mf" || 
                 $("#algo_name_selector_id").val() == "multi-vae" || 
-                $("#algo_name_selector_id").val() == "ngcf") {
+                $("#algo_name_selector_id").val() == "ngcf" || 
+                $("#algo_name_selector_id").val() == "lightgcn") {
             // Changes in "GPU" input box
             $("#gpu_input_id").attr("Disabled", false)
             $("#gpu_input_id").val("0")
@@ -7329,7 +7367,7 @@ jQuery(window).on("load", function(){
             // Changes in "Early_stop" selector
             $("#early_stop_selector_id").attr("Disabled", "Disabled")
             $("#early_stop_selector_id").val("")
-        // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE" or "NGCF"
+        // If choose "FM", "NFM", "NeuMF", "InfAE", "Item2Vec", "MF", "Multi-VAE", "NGCF" or "LightGCN"
         } else if ($("#algo_name_selector_id").val() == "fm" || 
                 $("#algo_name_selector_id").val() == "nfm" || 
                 $("#algo_name_selector_id").val() == "neumf" || 
@@ -7337,7 +7375,8 @@ jQuery(window).on("load", function(){
                 $("#algo_name_selector_id").val() == "item2vec" || 
                 $("#algo_name_selector_id").val() == "mf" || 
                 $("#algo_name_selector_id").val() == "multi-vae" || 
-                $("#algo_name_selector_id").val() == "ngcf") {
+                $("#algo_name_selector_id").val() == "ngcf" || 
+                $("#algo_name_selector_id").val() == "lightgcn") {
             // Changes in "Early_stop" selector
             $("#early_stop_selector_id").attr("Disabled", false)
             $("#early_stop_selector_id").val("True")
@@ -9961,6 +10000,27 @@ jQuery(window).on("load", function(){
             $("#reg_id").hide()
         // If choose "NGCF"
         } else if ($("#algo_name_selector_id").val() == "ngcf") {
+            // Changes in Algorithm Specific Setting
+            $("#batch_size_id").show()
+            $("#latent_dim_id").hide()
+            $("#dropout_id").hide()
+            $("#lr_id").show()
+            $("#anneal_cap_id").hide()
+            $("#factors_id").show()
+            $("#num_ng_id").show()
+            $("#node_dropout_id").show()
+            $("#mess_dropout_id").show()
+            $("#reg1_id").show()
+            $("#reg2_id").show()
+            $("#num_layers_id").hide()
+            $("#maxk_id").hide()
+            $("#alpha_id").hide()
+            $("#elastic_id").hide()
+            $("#context_window_id").hide()
+            $("#rho_id").hide()
+            $("#reg_id").hide()
+        // If choose "LightGCN"
+        } else if ($("#algo_name_selector_id").val() == "lightgcn") {
             // Changes in Algorithm Specific Setting
             $("#batch_size_id").show()
             $("#latent_dim_id").hide()
