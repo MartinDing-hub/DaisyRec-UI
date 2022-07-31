@@ -3227,7 +3227,7 @@ jQuery(window).on("load", function(){
             batch_size_choice_values = batch_size_choice_string.split(",")
 
             is_batch_size_correct_flag = true
-            if (batch_size_choice_values.length < 1) {
+            if (batch_size_choice_values.length < 1 || batch_size_choice_values == "") {
                 is_batch_size_correct_flag = false
             } else {
                 for (let i = 0; i < batch_size_choice_values.length; i++) {
@@ -3355,7 +3355,7 @@ jQuery(window).on("load", function(){
             latent_dim_choice_values = latent_dim_choice_string.split(",")
 
             is_latent_dim_correct_flag = true
-            if (latent_dim_choice_values.length < 1) {
+            if (latent_dim_choice_values.length < 1 || latent_dim_choice_values == "") {
                 is_latent_dim_correct_flag = false
             } else {
                 for (let i = 0; i < latent_dim_choice_values.length; i++) {
@@ -3483,7 +3483,7 @@ jQuery(window).on("load", function(){
             factors_choice_values = factors_choice_string.split(",")
 
             is_factors_correct_flag = true
-            if (factors_choice_values.length < 1) {
+            if (factors_choice_values.length < 1 || factors_choice_values == "") {
                 is_factors_correct_flag = false
             } else {
                 for (let i = 0; i < factors_choice_values.length; i++) {
@@ -3611,7 +3611,7 @@ jQuery(window).on("load", function(){
             num_ng_choice_values = num_ng_choice_string.split(",")
 
             is_num_ng_correct_flag = true
-            if (num_ng_choice_values.length < 1) {
+            if (num_ng_choice_values.length < 1 || num_ng_choice_values == "") {
                 is_num_ng_correct_flag = false
             } else {
                 for (let i = 0; i < num_ng_choice_values.length; i++) {
@@ -3739,7 +3739,7 @@ jQuery(window).on("load", function(){
             num_layers_choice_values = num_layers_choice_string.split(",")
 
             is_num_layers_correct_flag = true
-            if (num_layers_choice_values.length < 1) {
+            if (num_layers_choice_values.length < 1 || num_layers_choice_values == "") {
                 is_num_layers_correct_flag = false
             } else {
                 for (let i = 0; i < num_layers_choice_values.length; i++) {
@@ -3867,7 +3867,7 @@ jQuery(window).on("load", function(){
             maxk_choice_values = maxk_choice_string.split(",")
 
             is_maxk_correct_flag = true
-            if (maxk_choice_values.length < 1) {
+            if (maxk_choice_values.length < 1 || maxk_choice_values == "") {
                 is_maxk_correct_flag = false
             } else {
                 for (let i = 0; i < maxk_choice_values.length; i++) {
@@ -3995,7 +3995,7 @@ jQuery(window).on("load", function(){
             context_window_choice_values = context_window_choice_string.split(",")
 
             is_context_window_correct_flag = true
-            if (context_window_choice_values.length < 1) {
+            if (context_window_choice_values.length < 1 || context_window_choice_values == "") {
                 is_context_window_correct_flag = false
             } else {
                 for (let i = 0; i < context_window_choice_values.length; i++) {
@@ -4128,7 +4128,7 @@ jQuery(window).on("load", function(){
             dropout_choice_values = dropout_choice_string.split(",")
 
             is_dropout_correct_flag = true
-            if (dropout_choice_values.length < 1) {
+            if (dropout_choice_values.length < 1 || dropout_choice_values == "") {
                 is_dropout_correct_flag = false
             } else {
                 for (let i = 0; i < dropout_choice_values.length; i++) {
@@ -4261,7 +4261,7 @@ jQuery(window).on("load", function(){
             node_dropout_choice_values = node_dropout_choice_string.split(",")
 
             is_node_dropout_correct_flag = true
-            if (node_dropout_choice_values.length < 1) {
+            if (node_dropout_choice_values.length < 1 || node_dropout_choice_values == "") {
                 is_node_dropout_correct_flag = false
             } else {
                 for (let i = 0; i < node_dropout_choice_values.length; i++) {
@@ -4394,7 +4394,7 @@ jQuery(window).on("load", function(){
             mess_dropout_choice_values = mess_dropout_choice_string.split(",")
 
             is_mess_dropout_correct_flag = true
-            if (mess_dropout_choice_values.length < 1) {
+            if (mess_dropout_choice_values.length < 1 || mess_dropout_choice_values == "") {
                 is_mess_dropout_correct_flag = false
             } else {
                 for (let i = 0; i < mess_dropout_choice_values.length; i++) {
@@ -4519,7 +4519,7 @@ jQuery(window).on("load", function(){
             lr_choice_values = lr_choice_string.split(",")
 
             is_lr_correct_flag = true
-            if (lr_choice_values.length < 1) {
+            if (lr_choice_values.length < 1 || lr_choice_values == "") {
                 is_lr_correct_flag = false
             } else {
                 for (let i = 0; i < lr_choice_values.length; i++) {
@@ -4644,7 +4644,7 @@ jQuery(window).on("load", function(){
             anneal_cap_choice_values = anneal_cap_choice_string.split(",")
 
             is_anneal_cap_correct_flag = true
-            if (anneal_cap_choice_values.length < 1) {
+            if (anneal_cap_choice_values.length < 1 || anneal_cap_choice_values == "") {
                 is_anneal_cap_correct_flag = false
             } else {
                 for (let i = 0; i < anneal_cap_choice_values.length; i++) {
@@ -4769,7 +4769,7 @@ jQuery(window).on("load", function(){
             reg1_choice_values = reg1_choice_string.split(",")
 
             is_reg1_correct_flag = true
-            if (reg1_choice_values.length < 1) {
+            if (reg1_choice_values.length < 1 || reg1_choice_values == "") {
                 is_reg1_correct_flag = false
             } else {
                 for (let i = 0; i < reg1_choice_values.length; i++) {
@@ -4894,7 +4894,7 @@ jQuery(window).on("load", function(){
             reg2_choice_values = reg2_choice_string.split(",")
 
             is_reg2_correct_flag = true
-            if (reg2_choice_values.length < 1) {
+            if (reg2_choice_values.length < 1 || reg2_choice_values == "") {
                 is_reg2_correct_flag = false
             } else {
                 for (let i = 0; i < reg2_choice_values.length; i++) {
@@ -5019,7 +5019,7 @@ jQuery(window).on("load", function(){
             alpha_choice_values = alpha_choice_string.split(",")
 
             is_alpha_correct_flag = true
-            if (alpha_choice_values.length < 1) {
+            if (alpha_choice_values.length < 1 || alpha_choice_values == "") {
                 is_alpha_correct_flag = false
             } else {
                 for (let i = 0; i < alpha_choice_values.length; i++) {
@@ -5144,7 +5144,7 @@ jQuery(window).on("load", function(){
             elastic_choice_values = elastic_choice_string.split(",")
 
             is_elastic_correct_flag = true
-            if (elastic_choice_values.length < 1) {
+            if (elastic_choice_values.length < 1 || elastic_choice_values == "") {
                 is_elastic_correct_flag = false
             } else {
                 for (let i = 0; i < elastic_choice_values.length; i++) {
@@ -5269,7 +5269,7 @@ jQuery(window).on("load", function(){
             rho_choice_values = rho_choice_string.split(",")
 
             is_rho_correct_flag = true
-            if (rho_choice_values.length < 1) {
+            if (rho_choice_values.length < 1 || rho_choice_values == "") {
                 is_rho_correct_flag = false
             } else {
                 for (let i = 0; i < rho_choice_values.length; i++) {
@@ -5394,7 +5394,7 @@ jQuery(window).on("load", function(){
             reg_choice_values = reg_choice_string.split(",")
 
             is_reg_correct_flag = true
-            if (reg_choice_values.length < 1) {
+            if (reg_choice_values.length < 1 || reg_choice_values == "") {
                 is_reg_correct_flag = false
             } else {
                 for (let i = 0; i < reg_choice_values.length; i++) {
@@ -10280,7 +10280,7 @@ jQuery(window).on("load", function(){
         batch_size_choice_values = batch_size_choice_string.split(",")
 
         is_batch_size_correct_flag = true
-        if (batch_size_choice_values.length < 1) {
+        if (batch_size_choice_values.length < 1 || batch_size_choice_values == "") {
             is_batch_size_correct_flag = false
         } else {
             for (let i = 0; i < batch_size_choice_values.length; i++) {
@@ -10408,7 +10408,7 @@ jQuery(window).on("load", function(){
         latent_dim_choice_values = latent_dim_choice_string.split(",")
 
         is_latent_dim_correct_flag = true
-        if (latent_dim_choice_values.length < 1) {
+        if (latent_dim_choice_values.length < 1 || latent_dim_choice_values == "") {
             is_latent_dim_correct_flag = false
         } else {
             for (let i = 0; i < latent_dim_choice_values.length; i++) {
@@ -10536,7 +10536,7 @@ jQuery(window).on("load", function(){
         factors_choice_values = factors_choice_string.split(",")
 
         is_factors_correct_flag = true
-        if (factors_choice_values.length < 1) {
+        if (factors_choice_values.length < 1 || factors_choice_values == "") {
             is_factors_correct_flag = false
         } else {
             for (let i = 0; i < factors_choice_values.length; i++) {
@@ -10664,7 +10664,7 @@ jQuery(window).on("load", function(){
         num_ng_choice_values = num_ng_choice_string.split(",")
 
         is_num_ng_correct_flag = true
-        if (num_ng_choice_values.length < 1) {
+        if (num_ng_choice_values.length < 1 || num_ng_choice_values == "") {
             is_num_ng_correct_flag = false
         } else {
             for (let i = 0; i < num_ng_choice_values.length; i++) {
@@ -10792,7 +10792,7 @@ jQuery(window).on("load", function(){
         num_layers_choice_values = num_layers_choice_string.split(",")
 
         is_num_layers_correct_flag = true
-        if (num_layers_choice_values.length < 1) {
+        if (num_layers_choice_values.length < 1 || num_layers_choice_values == "") {
             is_num_layers_correct_flag = false
         } else {
             for (let i = 0; i < num_layers_choice_values.length; i++) {
@@ -10920,7 +10920,7 @@ jQuery(window).on("load", function(){
         maxk_choice_values = maxk_choice_string.split(",")
 
         is_maxk_correct_flag = true
-        if (maxk_choice_values.length < 1) {
+        if (maxk_choice_values.length < 1 || maxk_choice_values == "") {
             is_maxk_correct_flag = false
         } else {
             for (let i = 0; i < maxk_choice_values.length; i++) {
@@ -11048,7 +11048,7 @@ jQuery(window).on("load", function(){
         context_window_choice_values = context_window_choice_string.split(",")
 
         is_context_window_correct_flag = true
-        if (context_window_choice_values.length < 1) {
+        if (context_window_choice_values.length < 1 || context_window_choice_values == "") {
             is_context_window_correct_flag = false
         } else {
             for (let i = 0; i < context_window_choice_values.length; i++) {
@@ -11181,7 +11181,7 @@ jQuery(window).on("load", function(){
         dropout_choice_values = dropout_choice_string.split(",")
 
         is_dropout_correct_flag = true
-        if (dropout_choice_values.length < 1) {
+        if (dropout_choice_values.length < 1 || dropout_choice_values == "") {
             is_dropout_correct_flag = false
         } else {
             for (let i = 0; i < dropout_choice_values.length; i++) {
@@ -11314,7 +11314,7 @@ jQuery(window).on("load", function(){
         node_dropout_choice_values = node_dropout_choice_string.split(",")
 
         is_node_dropout_correct_flag = true
-        if (node_dropout_choice_values.length < 1) {
+        if (node_dropout_choice_values.length < 1 || node_dropout_choice_values == "") {
             is_node_dropout_correct_flag = false
         } else {
             for (let i = 0; i < node_dropout_choice_values.length; i++) {
@@ -11447,7 +11447,7 @@ jQuery(window).on("load", function(){
         mess_dropout_choice_values = mess_dropout_choice_string.split(",")
 
         is_mess_dropout_correct_flag = true
-        if (mess_dropout_choice_values.length < 1) {
+        if (mess_dropout_choice_values.length < 1 || mess_dropout_choice_values == "") {
             is_mess_dropout_correct_flag = false
         } else {
             for (let i = 0; i < mess_dropout_choice_values.length; i++) {
@@ -11572,7 +11572,7 @@ jQuery(window).on("load", function(){
         lr_choice_values = lr_choice_string.split(",")
 
         is_lr_correct_flag = true
-        if (lr_choice_values.length < 1) {
+        if (lr_choice_values.length < 1 || lr_choice_values == "") {
             is_lr_correct_flag = false
         } else {
             for (let i = 0; i < lr_choice_values.length; i++) {
@@ -11697,7 +11697,7 @@ jQuery(window).on("load", function(){
         anneal_cap_choice_values = anneal_cap_choice_string.split(",")
 
         is_anneal_cap_correct_flag = true
-        if (anneal_cap_choice_values.length < 1) {
+        if (anneal_cap_choice_values.length < 1 || anneal_cap_choice_values == "") {
             is_anneal_cap_correct_flag = false
         } else {
             for (let i = 0; i < anneal_cap_choice_values.length; i++) {
@@ -11822,7 +11822,7 @@ jQuery(window).on("load", function(){
         reg1_choice_values = reg1_choice_string.split(",")
 
         is_reg1_correct_flag = true
-        if (reg1_choice_values.length < 1) {
+        if (reg1_choice_values.length < 1 || reg1_choice_values == "") {
             is_reg1_correct_flag = false
         } else {
             for (let i = 0; i < reg1_choice_values.length; i++) {
@@ -11947,7 +11947,7 @@ jQuery(window).on("load", function(){
         reg2_choice_values = reg2_choice_string.split(",")
 
         is_reg2_correct_flag = true
-        if (reg2_choice_values.length < 1) {
+        if (reg2_choice_values.length < 1 || reg2_choice_values == "") {
             is_reg2_correct_flag = false
         } else {
             for (let i = 0; i < reg2_choice_values.length; i++) {
@@ -12072,7 +12072,7 @@ jQuery(window).on("load", function(){
         alpha_choice_values = alpha_choice_string.split(",")
 
         is_alpha_correct_flag = true
-        if (alpha_choice_values.length < 1) {
+        if (alpha_choice_values.length < 1 || alpha_choice_values == "") {
             is_alpha_correct_flag = false
         } else {
             for (let i = 0; i < alpha_choice_values.length; i++) {
@@ -12197,7 +12197,7 @@ jQuery(window).on("load", function(){
         elastic_choice_values = elastic_choice_string.split(",")
 
         is_elastic_correct_flag = true
-        if (elastic_choice_values.length < 1) {
+        if (elastic_choice_values.length < 1 || elastic_choice_values == "") {
             is_elastic_correct_flag = false
         } else {
             for (let i = 0; i < elastic_choice_values.length; i++) {
@@ -12322,7 +12322,7 @@ jQuery(window).on("load", function(){
         rho_choice_values = rho_choice_string.split(",")
 
         is_rho_correct_flag = true
-        if (rho_choice_values.length < 1) {
+        if (rho_choice_values.length < 1 || rho_choice_values == "") {
             is_rho_correct_flag = false
         } else {
             for (let i = 0; i < rho_choice_values.length; i++) {
@@ -12447,7 +12447,7 @@ jQuery(window).on("load", function(){
         reg_choice_values = reg_choice_string.split(",")
 
         is_reg_correct_flag = true
-        if (reg_choice_values.length < 1) {
+        if (reg_choice_values.length < 1 || reg_choice_values == "") {
             is_reg_correct_flag = false
         } else {
             for (let i = 0; i < reg_choice_values.length; i++) {
