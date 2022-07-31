@@ -8717,7 +8717,7 @@ jQuery(window).on("load", function(){
 
                 $("#reg1_space_id").show()
                 $("#reg1_group_id").show()
-                $("#reg1_choice_value_warning_id").hide()
+                $("#reg1_choice_group_id").hide()
 
                 $("#reg1_tune1_id").show()
                 $("#reg1_tune2_id").show()
@@ -8751,7 +8751,7 @@ jQuery(window).on("load", function(){
 
                 $("#reg1_space_id").show()
                 $("#reg1_group_id").show()
-                $("#reg1_choice_value_warning_id").hide()
+                $("#reg1_choice_group_id").hide()
 
                 $("#reg1_tune1_id").show()
                 $("#reg1_tune2_id").show()
@@ -8775,7 +8775,7 @@ jQuery(window).on("load", function(){
 
                 $("#reg1_space_id").show()
                 $("#reg1_group_id").hide()
-                $("#reg1_choice_value_warning_id").show()
+                $("#reg1_choice_group_id").show()
 
                 $("#reg1_tune1_id").hide()
                 $("#reg1_tune2_id").hide()
@@ -8799,7 +8799,7 @@ jQuery(window).on("load", function(){
 
                 $("#reg2_space_id").show()
                 $("#reg2_group_id").show()
-                $("#reg2_choice_value_warning_id").hide()
+                $("#reg2_choice_group_id").hide()
 
                 $("#reg2_tune1_id").show()
                 $("#reg2_tune2_id").show()
@@ -8833,7 +8833,7 @@ jQuery(window).on("load", function(){
 
                 $("#reg2_space_id").show()
                 $("#reg2_group_id").show()
-                $("#reg2_choice_value_warning_id").hide()
+                $("#reg2_choice_group_id").hide()
 
                 $("#reg2_tune1_id").show()
                 $("#reg2_tune2_id").show()
@@ -8857,7 +8857,7 @@ jQuery(window).on("load", function(){
 
                 $("#reg2_space_id").show()
                 $("#reg2_group_id").hide()
-                $("#reg2_choice_value_warning_id").show()
+                $("#reg2_choice_group_id").show()
 
                 $("#reg2_tune1_id").hide()
                 $("#reg2_tune2_id").hide()
