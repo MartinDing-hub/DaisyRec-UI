@@ -1477,7 +1477,7 @@ jQuery(window).on("load", function(){
                     $("#batch_size_tune3_id").hide()
                     $("#batch_size_test_id").hide()
         
-                    $("#batch_size_choice_value_input_id").val("128, 512, 1")
+                    $("#batch_size_choice_value_input_id").val("128, 320, 512")
         
                     $("#batch_size_choice_value_warning_id").hide()
                 }
@@ -1559,7 +1559,7 @@ jQuery(window).on("load", function(){
                     $("#latent_dim_tune3_id").hide()
                     $("#latent_dim_test_id").hide()
 
-                    $("#latent_dim_choice_value_input_id").val("64, 256, 1")
+                    $("#latent_dim_choice_value_input_id").val("64, 160, 256")
 
                     $("#latent_dim_choice_value_warning_id").hide()
                 }
@@ -1641,7 +1641,7 @@ jQuery(window).on("load", function(){
                     $("#dropout_tune3_id").hide()
                     $("#dropout_test_id").hide()
 
-                    $("#dropout_choice_value_input_id").val("0.1, 0.9, 0.1")
+                    $("#dropout_choice_value_input_id").val("0.1, 0.5, 0.9")
 
                     $("#dropout_choice_value_warning_id").hide()
                 }
@@ -1723,7 +1723,7 @@ jQuery(window).on("load", function(){
                     $("#lr_tune3_id").hide()
                     $("#lr_test_id").hide()
 
-                    $("#lr_choice_value_input_id").val("0.001, 0.01, 0.001")
+                    $("#lr_choice_value_input_id").val("0.001, 0.005, 0.01")
 
                     $("#lr_choice_value_warning_id").hide()
                 }
@@ -1805,7 +1805,7 @@ jQuery(window).on("load", function(){
                     $("#anneal_cap_tune3_id").hide()
                     $("#anneal_cap_test_id").hide()
 
-                    $("#anneal_cap_choice_value_input_id").val("0.1, 1, 0.1")
+                    $("#anneal_cap_choice_value_input_id").val("0.1, 0.5, 1")
 
                     $("#anneal_cap_choice_value_warning_id").hide()
                 }
@@ -1887,7 +1887,7 @@ jQuery(window).on("load", function(){
                     $("#factors_tune3_id").hide()
                     $("#factors_test_id").hide()
 
-                    $("#factors_choice_value_input_id").val("20, 100, 1")
+                    $("#factors_choice_value_input_id").val("20, 60, 100")
 
                     $("#factors_choice_value_warning_id").hide()
                 }
@@ -1969,7 +1969,7 @@ jQuery(window).on("load", function(){
                     $("#num_ng_tune3_id").hide()
                     $("#num_ng_test_id").hide()
 
-                    $("#num_ng_choice_value_input_id").val("1, 4, 1")
+                    $("#num_ng_choice_value_input_id").val("1, 3, 4")
 
                     $("#num_ng_choice_value_warning_id").hide()
                 }
@@ -2051,7 +2051,7 @@ jQuery(window).on("load", function(){
                     $("#node_dropout_tune3_id").hide()
                     $("#node_dropout_test_id").hide()
 
-                    $("#node_dropout_choice_value_input_id"),val("0.1, 0.9, 0.1")
+                    $("#node_dropout_choice_value_input_id").val("0.1, 0.5, 0.9")
 
                     $("#node_dropout_choice_value_warning_id").hide()
                 }
@@ -2133,7 +2133,7 @@ jQuery(window).on("load", function(){
                     $("#mess_dropout_tune3_id").hide()
                     $("#mess_dropout_test_id").hide()
 
-                    $("#mess_dropout_choice_value_input_id").val("0.1, 0.9, 0.1")
+                    $("#mess_dropout_choice_value_input_id").val("0.1, 0.5, 0.9")
 
                     $("#mess_dropout_choice_value_warning_id").hide()
                 }
@@ -2150,7 +2150,7 @@ jQuery(window).on("load", function(){
 
                     $("#reg1_space_id").show()
                     $("#reg1_group_id").show()
-                    $("#reg1_choice_value_warning_id").hide()
+                    $("#reg1_choice_group_id").hide()
 
                     $("#reg1_tune1_id").show()
                     $("#reg1_tune2_id").show()
@@ -2173,7 +2173,7 @@ jQuery(window).on("load", function(){
 
                     $("#reg1_space_id").hide()
                     $("#reg1_group_id").hide()
-                    $("#reg1_choice_value_warning_id").hide()
+                    $("#reg1_choice_group_id").hide()
                 }
             })
 
@@ -2184,7 +2184,7 @@ jQuery(window).on("load", function(){
 
                     $("#reg1_space_id").show()
                     $("#reg1_group_id").show()
-                    $("#reg1_choice_value_warning_id").hide()
+                    $("#reg1_choice_group_id").hide()
 
                     $("#reg1_tune1_id").show()
                     $("#reg1_tune2_id").show()
@@ -2215,7 +2215,7 @@ jQuery(window).on("load", function(){
                     $("#reg1_tune3_id").hide()
                     $("#reg1_test_id").hide()
 
-                    $("#reg1_choice_value_input_id").val("0.01, 0.1, 0.01")
+                    $("#reg1_choice_value_input_id").val("0.01, 0.05, 0.1")
 
                     $("#reg1_choice_value_warning_id").hide()
                 }
@@ -2232,7 +2232,7 @@ jQuery(window).on("load", function(){
 
                     $("#reg2_space_id").show()
                     $("#reg2_group_id").show()
-                    $("#reg2_choice_value_warning_id").hide()
+                    $("#reg2_choice_group_id").hide()
 
                     $("#reg2_tune1_id").show()
                     $("#reg2_tune2_id").show()
@@ -2255,7 +2255,7 @@ jQuery(window).on("load", function(){
 
                     $("#reg2_space_id").hide()
                     $("#reg2_group_id").hide()
-                    $("#reg2_choice_value_warning_id").hide()
+                    $("#reg2_choice_group_id").hide()
                 }
             })
 
@@ -2266,7 +2266,7 @@ jQuery(window).on("load", function(){
 
                     $("#reg2_space_id").show()
                     $("#reg2_group_id").show()
-                    $("#reg2_choice_value_warning_id").hide()
+                    $("#reg2_choice_group_id").hide()
 
                     $("#reg2_tune1_id").show()
                     $("#reg2_tune2_id").show()
@@ -2290,14 +2290,14 @@ jQuery(window).on("load", function(){
 
                     $("#reg2_space_id").show()
                     $("#reg2_group_id").hide()
-                    $("#reg2_choice_value_warning_id").show()
+                    $("#reg2_choice_group_id").show()
 
                     $("#reg2_tune1_id").hide()
                     $("#reg2_tune2_id").hide()
                     $("#reg2_tune3_id").hide()
                     $("#reg2_test_id").hide()
 
-                    $("#reg2_choice_value_input_id").val("0.01, 0.1, 0.01")
+                    $("#reg2_choice_value_input_id").val("0.01, 0.05, 0.1")
 
                     $("#reg2_choice_value_warning_id").hide()
                 }
@@ -2379,7 +2379,7 @@ jQuery(window).on("load", function(){
                     $("#num_layers_tune3_id").hide()
                     $("#num_layers_test_id").hide()
 
-                    $("#num_layers_choice_value_input_id").val("1, 3, 1")
+                    $("#num_layers_choice_value_input_id").val("1, 2, 3")
 
                     $("#num_layers_choice_value_warning_id").hide()
                 }
@@ -2461,7 +2461,7 @@ jQuery(window).on("load", function(){
                     $("#maxk_tune3_id").hide()
                     $("#maxk_test_id").hide()
 
-                    $("#maxk_choice_value_input_id").val("30, 60, 1")
+                    $("#maxk_choice_value_input_id").val("30, 45, 60")
 
                     $("#maxk_choice_value_warning_id").hide()
                 }
@@ -2543,7 +2543,7 @@ jQuery(window).on("load", function(){
                     $("#alpha_tune3_id").hide()
                     $("#alpha_test_id").hide()
 
-                    $("#alpha_choice_value_input_id").val("1, 10, 1")
+                    $("#alpha_choice_value_input_id").val("1, 5, 10")
 
                     $("#alpha_choice_value_warning_id").hide()
                 }
@@ -2625,7 +2625,7 @@ jQuery(window).on("load", function(){
                     $("#elastic_tune3_id").hide()
                     $("#elastic_test_id").hide()
 
-                    $("#elastic_choice_value_input_id").val("0.1, 0.9, 0.1")
+                    $("#elastic_choice_value_input_id").val("0.1, 0.5, 0.9")
 
                     $("#elastic_choice_value_warning_id").hide()
                 }
@@ -2707,7 +2707,7 @@ jQuery(window).on("load", function(){
                     $("#context_window_tune3_id").hide()
                     $("#context_window_test_id").hide()
 
-                    $("#context_window_choice_value_input_id").val("1, 2, 1")
+                    $("#context_window_choice_value_input_id").val("1, 2, 3")
 
                     $("#context_window_choice_value_warning_id").hide()
                 }
@@ -2789,7 +2789,7 @@ jQuery(window).on("load", function(){
                     $("#rho_tune3_id").hide()
                     $("#rho_test_id").hide()
 
-                    $("#rho_choice_value_input_id").val("0.01, 0.5, 0.01")
+                    $("#rho_choice_value_input_id").val("0.01, 0.3, 0.5")
 
                     $("#rho_choice_value_warning_id").hide()
                 }
@@ -2871,7 +2871,7 @@ jQuery(window).on("load", function(){
                     $("#reg_tune3_id").hide()
                     $("#reg_test_id").hide()
 
-                    $("#reg_choice_value_input_id").val("10, 1000, 1")
+                    $("#reg_choice_value_input_id").val("10, 500, 1000")
 
                     $("#reg_choice_value_warning_id").hide()
                 }
@@ -3227,7 +3227,7 @@ jQuery(window).on("load", function(){
             batch_size_choice_values = batch_size_choice_string.split(",")
 
             is_batch_size_correct_flag = true
-            if (batch_size_choice_values.length != 3) {
+            if (batch_size_choice_values.length < 1) {
                 is_batch_size_correct_flag = false
             } else {
                 for (let i = 0; i < batch_size_choice_values.length; i++) {
@@ -3355,7 +3355,7 @@ jQuery(window).on("load", function(){
             latent_dim_choice_values = latent_dim_choice_string.split(",")
 
             is_latent_dim_correct_flag = true
-            if (latent_dim_choice_values.length != 3) {
+            if (latent_dim_choice_values.length < 1) {
                 is_latent_dim_correct_flag = false
             } else {
                 for (let i = 0; i < latent_dim_choice_values.length; i++) {
@@ -3483,7 +3483,7 @@ jQuery(window).on("load", function(){
             factors_choice_values = factors_choice_string.split(",")
 
             is_factors_correct_flag = true
-            if (factors_choice_values.length != 3) {
+            if (factors_choice_values.length < 1) {
                 is_factors_correct_flag = false
             } else {
                 for (let i = 0; i < factors_choice_values.length; i++) {
@@ -3611,7 +3611,7 @@ jQuery(window).on("load", function(){
             num_ng_choice_values = num_ng_choice_string.split(",")
 
             is_num_ng_correct_flag = true
-            if (num_ng_choice_values.length != 3) {
+            if (num_ng_choice_values.length < 1) {
                 is_num_ng_correct_flag = false
             } else {
                 for (let i = 0; i < num_ng_choice_values.length; i++) {
@@ -3739,7 +3739,7 @@ jQuery(window).on("load", function(){
             num_layers_choice_values = num_layers_choice_string.split(",")
 
             is_num_layers_correct_flag = true
-            if (num_layers_choice_values.length != 3) {
+            if (num_layers_choice_values.length < 1) {
                 is_num_layers_correct_flag = false
             } else {
                 for (let i = 0; i < num_layers_choice_values.length; i++) {
@@ -3867,7 +3867,7 @@ jQuery(window).on("load", function(){
             maxk_choice_values = maxk_choice_string.split(",")
 
             is_maxk_correct_flag = true
-            if (maxk_choice_values.length != 3) {
+            if (maxk_choice_values.length < 1) {
                 is_maxk_correct_flag = false
             } else {
                 for (let i = 0; i < maxk_choice_values.length; i++) {
@@ -3995,7 +3995,7 @@ jQuery(window).on("load", function(){
             context_window_choice_values = context_window_choice_string.split(",")
 
             is_context_window_correct_flag = true
-            if (context_window_choice_values.length != 3) {
+            if (context_window_choice_values.length < 1) {
                 is_context_window_correct_flag = false
             } else {
                 for (let i = 0; i < context_window_choice_values.length; i++) {
@@ -4128,7 +4128,7 @@ jQuery(window).on("load", function(){
             dropout_choice_values = dropout_choice_string.split(",")
 
             is_dropout_correct_flag = true
-            if (dropout_choice_values.length != 3) {
+            if (dropout_choice_values.length < 1) {
                 is_dropout_correct_flag = false
             } else {
                 for (let i = 0; i < dropout_choice_values.length; i++) {
@@ -4261,7 +4261,7 @@ jQuery(window).on("load", function(){
             node_dropout_choice_values = node_dropout_choice_string.split(",")
 
             is_node_dropout_correct_flag = true
-            if (node_dropout_choice_values.length != 3) {
+            if (node_dropout_choice_values.length < 1) {
                 is_node_dropout_correct_flag = false
             } else {
                 for (let i = 0; i < node_dropout_choice_values.length; i++) {
@@ -4394,7 +4394,7 @@ jQuery(window).on("load", function(){
             mess_dropout_choice_values = mess_dropout_choice_string.split(",")
 
             is_mess_dropout_correct_flag = true
-            if (mess_dropout_choice_values.length != 3) {
+            if (mess_dropout_choice_values.length < 1) {
                 is_mess_dropout_correct_flag = false
             } else {
                 for (let i = 0; i < mess_dropout_choice_values.length; i++) {
@@ -4519,7 +4519,7 @@ jQuery(window).on("load", function(){
             lr_choice_values = lr_choice_string.split(",")
 
             is_lr_correct_flag = true
-            if (lr_choice_values.length != 3) {
+            if (lr_choice_values.length < 1) {
                 is_lr_correct_flag = false
             } else {
                 for (let i = 0; i < lr_choice_values.length; i++) {
@@ -4644,7 +4644,7 @@ jQuery(window).on("load", function(){
             anneal_cap_choice_values = anneal_cap_choice_string.split(",")
 
             is_anneal_cap_correct_flag = true
-            if (anneal_cap_choice_values.length != 3) {
+            if (anneal_cap_choice_values.length < 1) {
                 is_anneal_cap_correct_flag = false
             } else {
                 for (let i = 0; i < anneal_cap_choice_values.length; i++) {
@@ -4769,7 +4769,7 @@ jQuery(window).on("load", function(){
             reg1_choice_values = reg1_choice_string.split(",")
 
             is_reg1_correct_flag = true
-            if (reg1_choice_values.length != 3) {
+            if (reg1_choice_values.length < 1) {
                 is_reg1_correct_flag = false
             } else {
                 for (let i = 0; i < reg1_choice_values.length; i++) {
@@ -4894,7 +4894,7 @@ jQuery(window).on("load", function(){
             reg2_choice_values = reg2_choice_string.split(",")
 
             is_reg2_correct_flag = true
-            if (reg2_choice_values.length != 3) {
+            if (reg2_choice_values.length < 1) {
                 is_reg2_correct_flag = false
             } else {
                 for (let i = 0; i < reg2_choice_values.length; i++) {
@@ -5019,7 +5019,7 @@ jQuery(window).on("load", function(){
             alpha_choice_values = alpha_choice_string.split(",")
 
             is_alpha_correct_flag = true
-            if (alpha_choice_values.length != 3) {
+            if (alpha_choice_values.length < 1) {
                 is_alpha_correct_flag = false
             } else {
                 for (let i = 0; i < alpha_choice_values.length; i++) {
@@ -5144,7 +5144,7 @@ jQuery(window).on("load", function(){
             elastic_choice_values = elastic_choice_string.split(",")
 
             is_elastic_correct_flag = true
-            if (elastic_choice_values.length != 3) {
+            if (elastic_choice_values.length < 1) {
                 is_elastic_correct_flag = false
             } else {
                 for (let i = 0; i < elastic_choice_values.length; i++) {
@@ -5269,7 +5269,7 @@ jQuery(window).on("load", function(){
             rho_choice_values = rho_choice_string.split(",")
 
             is_rho_correct_flag = true
-            if (rho_choice_values.length != 3) {
+            if (rho_choice_values.length < 1) {
                 is_rho_correct_flag = false
             } else {
                 for (let i = 0; i < rho_choice_values.length; i++) {
@@ -5394,7 +5394,7 @@ jQuery(window).on("load", function(){
             reg_choice_values = reg_choice_string.split(",")
 
             is_reg_correct_flag = true
-            if (reg_choice_values.length != 3) {
+            if (reg_choice_values.length < 1) {
                 is_reg_correct_flag = false
             } else {
                 for (let i = 0; i < reg_choice_values.length; i++) {
@@ -8044,7 +8044,7 @@ jQuery(window).on("load", function(){
                 $("#batch_size_tune3_id").hide()
                 $("#batch_size_test_id").hide()
     
-                $("#batch_size_choice_value_input_id").val("128, 512, 1")
+                $("#batch_size_choice_value_input_id").val("128, 320, 512")
     
                 $("#batch_size_choice_value_warning_id").hide()
             }
@@ -8126,7 +8126,7 @@ jQuery(window).on("load", function(){
                 $("#latent_dim_tune3_id").hide()
                 $("#latent_dim_test_id").hide()
 
-                $("#latent_dim_choice_value_input_id").val("64, 256, 1")
+                $("#latent_dim_choice_value_input_id").val("64, 160, 256")
 
                 $("#latent_dim_choice_value_warning_id").hide()
             }
@@ -8208,7 +8208,7 @@ jQuery(window).on("load", function(){
                 $("#dropout_tune3_id").hide()
                 $("#dropout_test_id").hide()
 
-                $("#dropout_choice_value_input_id").val("0.1, 0.9, 0.1")
+                $("#dropout_choice_value_input_id").val("0.1, 0.5, 0.9")
 
                 $("#dropout_choice_value_warning_id").hide()
             }
@@ -8290,7 +8290,7 @@ jQuery(window).on("load", function(){
                 $("#lr_tune3_id").hide()
                 $("#lr_test_id").hide()
 
-                $("#lr_choice_value_input_id").val("0.001, 0.01, 0.001")
+                $("#lr_choice_value_input_id").val("0.001, 0.005, 0.01")
 
                 $("#lr_choice_value_warning_id").hide()
             }
@@ -8372,7 +8372,7 @@ jQuery(window).on("load", function(){
                 $("#anneal_cap_tune3_id").hide()
                 $("#anneal_cap_test_id").hide()
 
-                $("#anneal_cap_choice_value_input_id").val("0.1, 1, 0.1")
+                $("#anneal_cap_choice_value_input_id").val("0.1, 0.5, 1")
 
                 $("#anneal_cap_choice_value_warning_id").hide()
             }
@@ -8454,7 +8454,7 @@ jQuery(window).on("load", function(){
                 $("#factors_tune3_id").hide()
                 $("#factors_test_id").hide()
 
-                $("#factors_choice_value_input_id").val("20, 100, 1")
+                $("#factors_choice_value_input_id").val("20, 60, 100")
 
                 $("#factors_choice_value_warning_id").hide()
             }
@@ -8536,7 +8536,7 @@ jQuery(window).on("load", function(){
                 $("#num_ng_tune3_id").hide()
                 $("#num_ng_test_id").hide()
 
-                $("#num_ng_choice_value_input_id").val("1, 4, 1")
+                $("#num_ng_choice_value_input_id").val("1, 3, 4")
 
                 $("#num_ng_choice_value_warning_id").hide()
             }
@@ -8618,7 +8618,7 @@ jQuery(window).on("load", function(){
                 $("#node_dropout_tune3_id").hide()
                 $("#node_dropout_test_id").hide()
 
-                $("#node_dropout_choice_value_input_id"),val("0.1, 0.9, 0.1")
+                $("#node_dropout_choice_value_input_id").val("0.1, 0.5, 0.9")
 
                 $("#node_dropout_choice_value_warning_id").hide()
             }
@@ -8700,7 +8700,7 @@ jQuery(window).on("load", function(){
                 $("#mess_dropout_tune3_id").hide()
                 $("#mess_dropout_test_id").hide()
 
-                $("#mess_dropout_choice_value_input_id").val("0.1, 0.9, 0.1")
+                $("#mess_dropout_choice_value_input_id").val("0.1, 0.5, 0.9")
 
                 $("#mess_dropout_choice_value_warning_id").hide()
             }
@@ -8740,7 +8740,7 @@ jQuery(window).on("load", function(){
 
                 $("#reg1_space_id").hide()
                 $("#reg1_group_id").hide()
-                $("#reg1_choice_value_warning_id").hide()
+                $("#reg1_choice_group_id").hide()
             }
         })
 
@@ -8782,7 +8782,7 @@ jQuery(window).on("load", function(){
                 $("#reg1_tune3_id").hide()
                 $("#reg1_test_id").hide()
 
-                $("#reg1_choice_value_input_id").val("0.01, 0.1, 0.01")
+                $("#reg1_choice_value_input_id").val("0.01, 0.05, 0.1")
 
                 $("#reg1_choice_value_warning_id").hide()
             }
@@ -8822,7 +8822,7 @@ jQuery(window).on("load", function(){
 
                 $("#reg2_space_id").hide()
                 $("#reg2_group_id").hide()
-                $("#reg2_choice_value_warning_id").hide()
+                $("#reg2_choice_group_id").hide()
             }
         })
 
@@ -8864,7 +8864,7 @@ jQuery(window).on("load", function(){
                 $("#reg2_tune3_id").hide()
                 $("#reg2_test_id").hide()
 
-                $("#reg2_choice_value_input_id").val("0.01, 0.1, 0.01")
+                $("#reg2_choice_value_input_id").val("0.01, 0.05, 0.1")
 
                 $("#reg2_choice_value_warning_id").hide()
             }
@@ -8946,7 +8946,7 @@ jQuery(window).on("load", function(){
                 $("#num_layers_tune3_id").hide()
                 $("#num_layers_test_id").hide()
 
-                $("#num_layers_choice_value_input_id").val("1, 3, 1")
+                $("#num_layers_choice_value_input_id").val("1, 2, 3")
 
                 $("#num_layers_choice_value_warning_id").hide()
             }
@@ -9028,7 +9028,7 @@ jQuery(window).on("load", function(){
                 $("#maxk_tune3_id").hide()
                 $("#maxk_test_id").hide()
 
-                $("#maxk_choice_value_input_id").val("30, 60, 1")
+                $("#maxk_choice_value_input_id").val("30, 45, 60")
 
                 $("#maxk_choice_value_warning_id").hide()
             }
@@ -9110,7 +9110,7 @@ jQuery(window).on("load", function(){
                 $("#alpha_tune3_id").hide()
                 $("#alpha_test_id").hide()
 
-                $("#alpha_choice_value_input_id").val("1, 10, 1")
+                $("#alpha_choice_value_input_id").val("1, 5, 10")
 
                 $("#alpha_choice_value_warning_id").hide()
             }
@@ -9192,7 +9192,7 @@ jQuery(window).on("load", function(){
                 $("#elastic_tune3_id").hide()
                 $("#elastic_test_id").hide()
 
-                $("#elastic_choice_value_input_id").val("0.1, 0.9, 0.1")
+                $("#elastic_choice_value_input_id").val("0.1, 0.5, 0.9")
 
                 $("#elastic_choice_value_warning_id").hide()
             }
@@ -9274,7 +9274,7 @@ jQuery(window).on("load", function(){
                 $("#context_window_tune3_id").hide()
                 $("#context_window_test_id").hide()
 
-                $("#context_window_choice_value_input_id").val("1, 2, 1")
+                $("#context_window_choice_value_input_id").val("1, 2, 3")
 
                 $("#context_window_choice_value_warning_id").hide()
             }
@@ -9356,7 +9356,7 @@ jQuery(window).on("load", function(){
                 $("#rho_tune3_id").hide()
                 $("#rho_test_id").hide()
 
-                $("#rho_choice_value_input_id").val("0.01, 0.5, 0.01")
+                $("#rho_choice_value_input_id").val("0.01, 0.3, 0.5")
 
                 $("#rho_choice_value_warning_id").hide()
             }
@@ -9438,7 +9438,7 @@ jQuery(window).on("load", function(){
                 $("#reg_tune3_id").hide()
                 $("#reg_test_id").hide()
 
-                $("#reg_choice_value_input_id").val("10, 1000, 1")
+                $("#reg_choice_value_input_id").val("10, 500, 1000")
 
                 $("#reg_choice_value_warning_id").hide()
             }
@@ -10280,7 +10280,7 @@ jQuery(window).on("load", function(){
         batch_size_choice_values = batch_size_choice_string.split(",")
 
         is_batch_size_correct_flag = true
-        if (batch_size_choice_values.length != 3) {
+        if (batch_size_choice_values.length < 1) {
             is_batch_size_correct_flag = false
         } else {
             for (let i = 0; i < batch_size_choice_values.length; i++) {
@@ -10408,7 +10408,7 @@ jQuery(window).on("load", function(){
         latent_dim_choice_values = latent_dim_choice_string.split(",")
 
         is_latent_dim_correct_flag = true
-        if (latent_dim_choice_values.length != 3) {
+        if (latent_dim_choice_values.length < 1) {
             is_latent_dim_correct_flag = false
         } else {
             for (let i = 0; i < latent_dim_choice_values.length; i++) {
@@ -10536,7 +10536,7 @@ jQuery(window).on("load", function(){
         factors_choice_values = factors_choice_string.split(",")
 
         is_factors_correct_flag = true
-        if (factors_choice_values.length != 3) {
+        if (factors_choice_values.length < 1) {
             is_factors_correct_flag = false
         } else {
             for (let i = 0; i < factors_choice_values.length; i++) {
@@ -10664,7 +10664,7 @@ jQuery(window).on("load", function(){
         num_ng_choice_values = num_ng_choice_string.split(",")
 
         is_num_ng_correct_flag = true
-        if (num_ng_choice_values.length != 3) {
+        if (num_ng_choice_values.length < 1) {
             is_num_ng_correct_flag = false
         } else {
             for (let i = 0; i < num_ng_choice_values.length; i++) {
@@ -10792,7 +10792,7 @@ jQuery(window).on("load", function(){
         num_layers_choice_values = num_layers_choice_string.split(",")
 
         is_num_layers_correct_flag = true
-        if (num_layers_choice_values.length != 3) {
+        if (num_layers_choice_values.length < 1) {
             is_num_layers_correct_flag = false
         } else {
             for (let i = 0; i < num_layers_choice_values.length; i++) {
@@ -10920,7 +10920,7 @@ jQuery(window).on("load", function(){
         maxk_choice_values = maxk_choice_string.split(",")
 
         is_maxk_correct_flag = true
-        if (maxk_choice_values.length != 3) {
+        if (maxk_choice_values.length < 1) {
             is_maxk_correct_flag = false
         } else {
             for (let i = 0; i < maxk_choice_values.length; i++) {
@@ -11048,7 +11048,7 @@ jQuery(window).on("load", function(){
         context_window_choice_values = context_window_choice_string.split(",")
 
         is_context_window_correct_flag = true
-        if (context_window_choice_values.length != 3) {
+        if (context_window_choice_values.length < 1) {
             is_context_window_correct_flag = false
         } else {
             for (let i = 0; i < context_window_choice_values.length; i++) {
@@ -11181,7 +11181,7 @@ jQuery(window).on("load", function(){
         dropout_choice_values = dropout_choice_string.split(",")
 
         is_dropout_correct_flag = true
-        if (dropout_choice_values.length != 3) {
+        if (dropout_choice_values.length < 1) {
             is_dropout_correct_flag = false
         } else {
             for (let i = 0; i < dropout_choice_values.length; i++) {
@@ -11314,7 +11314,7 @@ jQuery(window).on("load", function(){
         node_dropout_choice_values = node_dropout_choice_string.split(",")
 
         is_node_dropout_correct_flag = true
-        if (node_dropout_choice_values.length != 3) {
+        if (node_dropout_choice_values.length < 1) {
             is_node_dropout_correct_flag = false
         } else {
             for (let i = 0; i < node_dropout_choice_values.length; i++) {
@@ -11447,7 +11447,7 @@ jQuery(window).on("load", function(){
         mess_dropout_choice_values = mess_dropout_choice_string.split(",")
 
         is_mess_dropout_correct_flag = true
-        if (mess_dropout_choice_values.length != 3) {
+        if (mess_dropout_choice_values.length < 1) {
             is_mess_dropout_correct_flag = false
         } else {
             for (let i = 0; i < mess_dropout_choice_values.length; i++) {
@@ -11572,7 +11572,7 @@ jQuery(window).on("load", function(){
         lr_choice_values = lr_choice_string.split(",")
 
         is_lr_correct_flag = true
-        if (lr_choice_values.length != 3) {
+        if (lr_choice_values.length < 1) {
             is_lr_correct_flag = false
         } else {
             for (let i = 0; i < lr_choice_values.length; i++) {
@@ -11697,7 +11697,7 @@ jQuery(window).on("load", function(){
         anneal_cap_choice_values = anneal_cap_choice_string.split(",")
 
         is_anneal_cap_correct_flag = true
-        if (anneal_cap_choice_values.length != 3) {
+        if (anneal_cap_choice_values.length < 1) {
             is_anneal_cap_correct_flag = false
         } else {
             for (let i = 0; i < anneal_cap_choice_values.length; i++) {
@@ -11822,7 +11822,7 @@ jQuery(window).on("load", function(){
         reg1_choice_values = reg1_choice_string.split(",")
 
         is_reg1_correct_flag = true
-        if (reg1_choice_values.length != 3) {
+        if (reg1_choice_values.length < 1) {
             is_reg1_correct_flag = false
         } else {
             for (let i = 0; i < reg1_choice_values.length; i++) {
@@ -11947,7 +11947,7 @@ jQuery(window).on("load", function(){
         reg2_choice_values = reg2_choice_string.split(",")
 
         is_reg2_correct_flag = true
-        if (reg2_choice_values.length != 3) {
+        if (reg2_choice_values.length < 1) {
             is_reg2_correct_flag = false
         } else {
             for (let i = 0; i < reg2_choice_values.length; i++) {
@@ -12072,7 +12072,7 @@ jQuery(window).on("load", function(){
         alpha_choice_values = alpha_choice_string.split(",")
 
         is_alpha_correct_flag = true
-        if (alpha_choice_values.length != 3) {
+        if (alpha_choice_values.length < 1) {
             is_alpha_correct_flag = false
         } else {
             for (let i = 0; i < alpha_choice_values.length; i++) {
@@ -12197,7 +12197,7 @@ jQuery(window).on("load", function(){
         elastic_choice_values = elastic_choice_string.split(",")
 
         is_elastic_correct_flag = true
-        if (elastic_choice_values.length != 3) {
+        if (elastic_choice_values.length < 1) {
             is_elastic_correct_flag = false
         } else {
             for (let i = 0; i < elastic_choice_values.length; i++) {
@@ -12322,7 +12322,7 @@ jQuery(window).on("load", function(){
         rho_choice_values = rho_choice_string.split(",")
 
         is_rho_correct_flag = true
-        if (rho_choice_values.length != 3) {
+        if (rho_choice_values.length < 1) {
             is_rho_correct_flag = false
         } else {
             for (let i = 0; i < rho_choice_values.length; i++) {
@@ -12447,7 +12447,7 @@ jQuery(window).on("load", function(){
         reg_choice_values = reg_choice_string.split(",")
 
         is_reg_correct_flag = true
-        if (reg_choice_values.length != 3) {
+        if (reg_choice_values.length < 1) {
             is_reg_correct_flag = false
         } else {
             for (let i = 0; i < reg_choice_values.length; i++) {
