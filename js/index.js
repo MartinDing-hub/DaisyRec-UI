@@ -12804,7 +12804,7 @@ jQuery(window).on("load", function(){
                     var dropout_string = ""
                     if($("#dropout_group_id").is(":visible") || $("#dropout_choice_group_id").is(":visible")) {
                         if (is_dropout_choice_flag) {
-                            dropout_string + dropout_string + '"dropout": [' + $("#dropout_choice_value_input_id").val().toString() + "]"
+                            dropout_string = dropout_string + '"dropout": [' + $("#dropout_choice_value_input_id").val().toString() + "]"
                         } else {
                             dropout_string = dropout_string + '"dropout": {"min": ' + $("#dropout_min_input_id").val().toString() 
                                 + ', "max": ' + $("#dropout_max_input_id").val().toString() + ', "step": '
