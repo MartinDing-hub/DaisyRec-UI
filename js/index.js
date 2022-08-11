@@ -64,7 +64,8 @@ jQuery(window).on("load", function(){
     $("#preprocess_selector_id option[id='preprocess_Origin']").attr("selected", "selected")
     $("#test_method_selector_id option[id='test_method_TSBR']").attr("selected", "selected")
     $("#val_method_selector_id option[id='val_method_TSBR']").attr("selected", "selected")
-    $("#sample_method_selector_id option[id='sam_method_Uniform']").attr("selected", "selected");
+    $("#sample_method_selector_id").val("");
+    $("#sample_method_selector_id").attr("Disabled", "Disabled");
     $("#init_method_selector_id option[id='ini_method_Default']").attr("selected", "selected");
         $("#ini_method_Default").show()
         $("#ini_method_Normal").show()
@@ -425,8 +426,8 @@ jQuery(window).on("load", function(){
             $("#test_method_selector_id").attr("Disabled", false)
         $("#val_method_selector_id").val("tsbr")
             $("#val_method_selector_id").attr("Disabled", false)
-        $("#sample_method_selector_id").val("uniform");
-            $("#sample_method_selector_id").attr("Disabled", false)
+        $("#sample_method_selector_id").val("");
+            $("#sample_method_selector_id").attr("Disabled", "Disabled")
         $("#init_method_selector_id").val("default")
             $("#init_method_selector_id").attr("Disabled", false)
             $("#ini_method_Default").show()
