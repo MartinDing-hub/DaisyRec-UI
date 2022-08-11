@@ -398,6 +398,7 @@ jQuery(window).on("load", function(){
         $("#copy_success_alert_id").hide()
         
         $("#optimization_metric_id").show()
+        $("#fold_num_id").show()
         $("#optimization_metric_selector_id").val("ndcg")
             $("#optimization_metric_selector_id").attr("Disabled", false)
         $("#algo_name_selector_id").val("multi-vae")
