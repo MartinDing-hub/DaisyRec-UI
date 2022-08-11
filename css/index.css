@@ -18,13 +18,15 @@
 }
 
 #tune_command_icon_id {
-    font-size: 20px; 
-    color: cornflowerblue;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
 }
 
 #tune_command_id {
     font-size: 20px; 
-    color: cornflowerblue;
+    font-weight: bolder; 
+    color: white;
 }
 
 #test_command_option_id {

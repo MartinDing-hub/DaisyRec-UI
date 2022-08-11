@@ -88,6 +88,8 @@ jQuery(window).on("load", function(){
         $("#topk_warning_id").hide()
     $("#fold_num_input_id").attr("Disabled", "Disabled")
         $("#fold_num_warning_id").hide()
+    $("#epoch_input_id").val(50)
+        $("#epoch_warning_id").hide()
     $("#cand_num_input_id").val(1000)
         $("#cand_num_warning_id").hide()
     $("#sample_ratio_input_id").attr("Disabled", "Disabled")
@@ -346,6 +348,12 @@ jQuery(window).on("load", function(){
     
     // Check whether link "tune_command" has been clicked
     $("#tune_command_id").bind("click", function(){
+        $("#tune_command_icon_id").css({"font-size": "20px", "font-weight": "bolder", "color": "white"})
+        $("#tune_command_id").css({"font-size": "20px", "font-weight": "bolder", "color": "white"})
+
+        $("#test_command_icon_id").css({"font-size": "20px", "font-weight": "normal", "color": "cornflowerblue"})
+        $("#test_command_id").css({"font-size": "20px", "font-weight": "normal", "color": "cornflowerblue"})
+
         is_test_flag = false
 
         is_batch_size_correct_flag = true
@@ -451,6 +459,9 @@ jQuery(window).on("load", function(){
         $("#fold_num_input_id").val("")
             $("#fold_num_input_id").attr("Disabled", "Disabled")
             $("#fold_num_warning_id").hide()
+        $("#epoch_input_id").val(50)
+            $("#epoch_input_id").attr("Disabled", false)
+            $("#epoch_warning_id").hide()
         $("#cand_num_input_id").val(1000)
             $("#cand_num_input_id").attr("Disabled", false)
             $("#cand_num_warning_id").hide()
@@ -1150,6 +1161,7 @@ jQuery(window).on("load", function(){
                     $("#preprocess_number_input_id").blur()
                     $("#topk_input_id").blur()
                     $("#fold_num_input_id").blur()
+                    $("#epoch_input_id").blur()
                     $("#test_size_input_id").blur()
                     $("#val_size_input_id").blur()
                     $("#cand_num_input_id").blur()
@@ -1306,6 +1318,25 @@ jQuery(window).on("load", function(){
             if ($("#fold_num_input_id").val() < 1) {
                 $("#fold_num_input_id").val(1)
                 $("#fold_num_warning_id").show()
+            }
+        })
+
+        $("#epoch_input_id").change(function(){
+            var val_epoch = $("#epoch_input_id").val()
+            test_val_epoch = Number(val_epoch)
+            if (!Number.isInteger(test_val_epoch)) {
+                $("#epoch_input_id").val(val_epoch)
+                $("#epoch_warning_id").show()
+            } else {
+                $("#epoch_input_id").val(Number(val_epoch))
+                $("#epoch_warning_id").hide()
+            }
+
+            // Set input range for "Epoch"
+            // The value should be an integer larger than 0
+            if ($("#epoch_input_id").val() < 1) {
+                $("#epoch_input_id").val(1)
+                $("#epoch_warning_id").show()
             }
         })
         
@@ -1477,7 +1508,7 @@ jQuery(window).on("load", function(){
                     $("#batch_size_tune3_id").hide()
                     $("#batch_size_test_id").hide()
         
-                    $("#batch_size_choice_value_input_id").val("128, 320, 512")
+                    $("#batch_size_choice_value_input_id").val("128, 256, 512")
         
                     $("#batch_size_choice_value_warning_id").hide()
                 }
@@ -2980,7 +3011,7 @@ jQuery(window).on("load", function(){
                 $("#mess_dropout_id").show()
                 $("#reg1_id").show()
                 $("#reg2_id").show()
-                $("#num_layers_id").hide()
+                $("#num_layers_id").show()
                 $("#maxk_id").hide()
                 $("#alpha_id").hide()
                 $("#elastic_id").hide()
@@ -3011,7 +3042,7 @@ jQuery(window).on("load", function(){
             // If choose "Item2Vec"
             } else if ($("#algo_name_selector_id").val() == "item2vec") {
                 // Changes in Algorithm Specific Setting
-                $("#batch_size_id").hide()
+                $("#batch_size_id").show()
                 $("#latent_dim_id").hide()
                 $("#dropout_id").hide()
                 $("#lr_id").show()
@@ -3092,27 +3123,27 @@ jQuery(window).on("load", function(){
                 $("#context_window_id").hide()
                 $("#rho_id").hide()
                 $("#reg_id").hide()
-            // If choose "InfAE"
-            } else if ($("#algo_name_selector_id").val() == "infae") {
+            // If choose "MostPop"
+            } else if ($("#algo_name_selector_id").val() == "mostpop") {
                 // Changes in Algorithm Specific Setting
-                $("#batch_size_id").show()
-                $("#latent_dim_id").show()
-                $("#dropout_id").show()
-                $("#lr_id").show()
-                $("#anneal_cap_id").show()
-                $("#factors_id").show()
-                $("#num_ng_id").show()
-                $("#node_dropout_id").show()
-                $("#mess_dropout_id").show()
-                $("#reg1_id").show()
-                $("#reg2_id").show()
-                $("#num_layers_id").show()
-                $("#maxk_id").show()
-                $("#alpha_id").show()
-                $("#elastic_id").show()
-                $("#context_window_id").show()
-                $("#rho_id").show()
-                $("#reg_id").show()
+                $("#batch_size_id").hide()
+                $("#latent_dim_id").hide()
+                $("#dropout_id").hide()
+                $("#lr_id").hide()
+                $("#anneal_cap_id").hide()
+                $("#factors_id").hide()
+                $("#num_ng_id").hide()
+                $("#node_dropout_id").hide()
+                $("#mess_dropout_id").hide()
+                $("#reg1_id").hide()
+                $("#reg2_id").hide()
+                $("#num_layers_id").hide()
+                $("#maxk_id").hide()
+                $("#alpha_id").hide()
+                $("#elastic_id").hide()
+                $("#context_window_id").hide()
+                $("#rho_id").hide()
+                $("#reg_id").hide()
             }
         })
 
@@ -5415,6 +5446,12 @@ jQuery(window).on("load", function(){
 
     // Check whether link "test_command" has been clicked
     $("#test_command_id").bind("click", function(){
+        $("#tune_command_icon_id").css({"font-size": "20px", "font-weight": "normal", "color": "cornflowerblue"})
+        $("#tune_command_id").css({"font-size": "20px", "font-weight": "normal", "color": "cornflowerblue"})
+
+        $("#test_command_icon_id").css({"font-size": "20px", "font-weight": "bolder", "color": "white"})
+        $("#test_command_id").css({"font-size": "20px", "font-weight": "bolder", "color": "white"})
+
         is_test_flag = true
 
         is_batch_size_correct_flag = true
@@ -5459,6 +5496,7 @@ jQuery(window).on("load", function(){
         $("#copy_success_alert_id").hide()
 
         $("#optimization_metric_id").hide()
+        $("#fold_num_id").hide()
         $("#algo_name_selector_id").val("multi-vae")
             $("#algo_name_selector_id").attr("Disabled", false)
             $("#alg_name_EASE").show()
@@ -5483,8 +5521,8 @@ jQuery(window).on("load", function(){
             $("#test_method_selector_id").attr("Disabled", false)
         $("#val_method_selector_id").val("tsbr")
             $("#val_method_selector_id").attr("Disabled", false)
-        $("#sample_method_selector_id").val("uniform");
-            $("#sample_method_selector_id").attr("Disabled", false)
+        $("#sample_method_selector_id").val("");
+            $("#sample_method_selector_id").attr("Disabled", "Disabled")
         $("#init_method_selector_id").val("default")
             $("#init_method_selector_id").attr("Disabled", false)
             $("#ini_method_Default").show()
@@ -5512,9 +5550,9 @@ jQuery(window).on("load", function(){
         $("#topk_input_id").val(50)
             $("#topk_input_id").attr("Disabled", false)
             $("#topk_warning_id").hide()
-        $("#fold_num_input_id").val("")
-            $("#fold_num_input_id").attr("Disabled", "Disabled")
-            $("#fold_num_warning_id").hide()
+        $("#epoch_input_id").val(50)
+            $("#epoch_input_id").attr("Disabled", false)
+            $("#epoch_warning_id").hide()
         $("#cand_num_input_id").val(1000)
             $("#cand_num_input_id").attr("Disabled", false)
             $("#cand_num_warning_id").hide()
@@ -5912,24 +5950,6 @@ jQuery(window).on("load", function(){
         })
 
         /* Part 4 */
-        // Changes will happen when "Val_method" is set
-        $("#val_method_selector_id").change(function(){
-            // If choose "RLOO (Random Leave-one-out)" or "RSBR (Random Split-by-ratio)"
-            if ($("#val_method_selector_id").val() == "rloo" || 
-                    $("#val_method_selector_id").val() == "rsbr"){
-                // Changes in "Fold_num" input box
-                $("#fold_num_input_id").attr("Disabled", false)
-                $("#fold_num_input_id").val(1)
-            // If choose "TLOO (Time-aware Leave-one-out)" or "TSBR (Time-aware Split-by-ratio)"
-            } else if ($("#val_method_selector_id").val() == "tloo" || 
-                    $("#val_method_selector_id").val() == "tsbr") {
-                // Changes in "Fold_num" input box
-                $("#fold_num_input_id").attr("Disabled", "Disabled")
-                $("#fold_num_input_id").val("")
-            }
-        })
-
-        /* Part 5 */
         // Changes will happen when "Test_method" is set
         $("#test_method_selector_id").change(function(){
             // If choose "RLOO (Random Leave-one-out)" or "RSBR (Random Split-by-ratio)"
@@ -5947,7 +5967,7 @@ jQuery(window).on("load", function(){
             }
         })
 
-        /* Part 6 */
+        /* Part 5 */
         // Changes will happen when "Algo_name" is set
         $("#algo_name_selector_id").change(function(){
             // If choose "EASE", "ItemKNN", "PureSVD" or "SLIM"
@@ -5974,7 +5994,7 @@ jQuery(window).on("load", function(){
             }
         })
 
-        /* Part 7 */
+        /* Part 6 */
         // Changes will happen when "Algo_name" is set
         $("#algo_name_selector_id").change(function(){
             // If choose "EASE", "ItemKNN", "MostPop", "PureSVD" or "SLIM"
@@ -6010,7 +6030,7 @@ jQuery(window).on("load", function(){
                     $("#hyperopt_trail_input_id").blur()
                     $("#preprocess_number_input_id").blur()
                     $("#topk_input_id").blur()
-                    $("#fold_num_input_id").blur()
+                    $("#epoch_input_id").blur()
                     $("#test_size_input_id").blur()
                     $("#val_size_input_id").blur()
                     $("#cand_num_input_id").blur()
@@ -6097,22 +6117,22 @@ jQuery(window).on("load", function(){
             }
         })
 
-        $("#fold_num_input_id").change(function(){
-            var val_fold_num = $("#fold_num_input_id").val()
-            test_val_fold_num = Number(val_fold_num)
-            if (!Number.isInteger(test_val_fold_num)) {
-                $("#fold_num_input_id").val(val_fold_num)
-                $("#fold_num_warning_id").show()
+        $("#epoch_input_id").change(function(){
+            var val_epoch = $("#epoch_input_id").val()
+            test_val_epoch = Number(val_epoch)
+            if (!Number.isInteger(test_val_epoch)) {
+                $("#epoch_input_id").val(val_epoch)
+                $("#epoch_warning_id").show()
             } else {
-                $("#fold_num_input_id").val(Number(val_fold_num))
-                $("#fold_num_warning_id").hide()
+                $("#epoch_input_id").val(Number(val_epoch))
+                $("#epoch_warning_id").hide()
             }
 
-            // Set input range for "Fold_num"
+            // Set input range for "Epoch"
             // The value should be an integer larger than 0
-            if ($("#fold_num_input_id").val() < 1) {
-                $("#fold_num_input_id").val(1)
-                $("#fold_num_warning_id").show()
+            if ($("#epoch_input_id").val() < 1) {
+                $("#epoch_input_id").val(1)
+                $("#epoch_warning_id").show()
             }
         })
         
@@ -7392,6 +7412,7 @@ jQuery(window).on("load", function(){
                 $("#preprocess_number_input_id").blur()
                 $("#topk_input_id").blur()
                 $("#fold_num_input_id").blur()
+                $("#epoch_input_id").blur()
                 $("#test_size_input_id").blur()
                 $("#val_size_input_id").blur()
                 $("#cand_num_input_id").blur()
@@ -7550,6 +7571,25 @@ jQuery(window).on("load", function(){
             $("#fold_num_warning_id").show()
         }
     })
+
+    $("#epoch_input_id").change(function(){
+        var val_epoch = $("#epoch_input_id").val()
+        test_val_epoch = Number(val_epoch)
+        if (!Number.isInteger(test_val_epoch)) {
+            $("#epoch_input_id").val(val_epoch)
+            $("#epoch_warning_id").show()
+        } else {
+            $("#epoch_input_id").val(Number(val_epoch))
+            $("#epoch_warning_id").hide()
+        }
+
+        // Set input range for "Epoch"
+        // The value should be an integer larger than 0
+        if ($("#epoch_input_id").val() < 1) {
+            $("#epoch_input_id").val(1)
+            $("#epoch_warning_id").show()
+        }
+    })
     
     $("#test_size_input_id").change(function(){
         var val_test_size = $("#test_size_input_id").val()
@@ -7665,6 +7705,7 @@ jQuery(window).on("load", function(){
                 $("#preprocess_number_input_id").attr("Disabled", "Disabled")
                 $("#topk_input_id").attr("Disabled", "Disabled")
                 $("#fold_num_input_id").attr("Disabled", "Disabled")
+                $("#epoch_input_id").attr("Disabled", "Disabled")
                 $("#test_size_input_id").attr("Disabled", "Disabled")
                 $("#val_size_input_id").attr("Disabled", "Disabled")
                 $("#cand_num_input_id").attr("Disabled", "Disabled")
@@ -7698,8 +7739,8 @@ jQuery(window).on("load", function(){
             $("#test_method_selector_id").val("tsbr")
             $("#val_method_selector_id").attr("Disabled", false)
             $("#val_method_selector_id").val("tsbr")
-            $("#sample_method_selector_id").attr("Disabled", false)
-            $("#sample_method_selector_id").val("uniform");
+            $("#sample_method_selector_id").attr("Disabled", "Disabled")
+            $("#sample_method_selector_id").val("");
             $("#init_method_selector_id").attr("Disabled", false)
             $("#init_method_selector_id").val("default");
             $("#optimizer_selector_id").attr("Disabled", false)
@@ -7727,6 +7768,9 @@ jQuery(window).on("load", function(){
             $("#fold_num_input_id").attr("Disabled", "Disabled")
             $("#fold_num_input_id").val("")
                 $("#fold_num_warning_id").hide()
+            $("#epoch_input_id").attr("Disabled", false)
+            $("#epoch_input_id").val(50)
+                $("#epoch_warning_id").hide()
             $("#cand_num_input_id").attr("Disabled", false)
             $("#cand_num_input_id").val(1000)
                 $("#cand_num_warning_id").hide()
@@ -8044,7 +8088,7 @@ jQuery(window).on("load", function(){
                 $("#batch_size_tune3_id").hide()
                 $("#batch_size_test_id").hide()
     
-                $("#batch_size_choice_value_input_id").val("128, 320, 512")
+                $("#batch_size_choice_value_input_id").val("128, 256, 512")
     
                 $("#batch_size_choice_value_warning_id").hide()
             }
@@ -10033,7 +10077,7 @@ jQuery(window).on("load", function(){
             $("#mess_dropout_id").show()
             $("#reg1_id").show()
             $("#reg2_id").show()
-            $("#num_layers_id").hide()
+            $("#num_layers_id").show()
             $("#maxk_id").hide()
             $("#alpha_id").hide()
             $("#elastic_id").hide()
@@ -10064,7 +10108,7 @@ jQuery(window).on("load", function(){
         // If choose "Item2Vec"
         } else if ($("#algo_name_selector_id").val() == "item2vec") {
             // Changes in Algorithm Specific Setting
-            $("#batch_size_id").hide()
+            $("#batch_size_id").show()
             $("#latent_dim_id").hide()
             $("#dropout_id").hide()
             $("#lr_id").show()
@@ -10145,27 +10189,27 @@ jQuery(window).on("load", function(){
             $("#context_window_id").hide()
             $("#rho_id").hide()
             $("#reg_id").hide()
-        // If choose "InfAE"
-        } else if ($("#algo_name_selector_id").val() == "infae") {
+        // If choose "MostPop"
+        } else if ($("#algo_name_selector_id").val() == "mostpop") {
             // Changes in Algorithm Specific Setting
-            $("#batch_size_id").show()
-            $("#latent_dim_id").show()
-            $("#dropout_id").show()
-            $("#lr_id").show()
-            $("#anneal_cap_id").show()
-            $("#factors_id").show()
-            $("#num_ng_id").show()
-            $("#node_dropout_id").show()
-            $("#mess_dropout_id").show()
-            $("#reg1_id").show()
-            $("#reg2_id").show()
-            $("#num_layers_id").show()
-            $("#maxk_id").show()
-            $("#alpha_id").show()
-            $("#elastic_id").show()
-            $("#context_window_id").show()
-            $("#rho_id").show()
-            $("#reg_id").show()
+            $("#batch_size_id").hide()
+            $("#latent_dim_id").hide()
+            $("#dropout_id").hide()
+            $("#lr_id").hide()
+            $("#anneal_cap_id").hide()
+            $("#factors_id").hide()
+            $("#num_ng_id").hide()
+            $("#node_dropout_id").hide()
+            $("#mess_dropout_id").hide()
+            $("#reg1_id").hide()
+            $("#reg2_id").hide()
+            $("#num_layers_id").hide()
+            $("#maxk_id").hide()
+            $("#alpha_id").hide()
+            $("#elastic_id").hide()
+            $("#context_window_id").hide()
+            $("#rho_id").hide()
+            $("#reg_id").hide()
         }
     })
 
@@ -12501,6 +12545,7 @@ jQuery(window).on("load", function(){
                 $("#preprocess_number_input_id").attr("Disabled", "Disabled")
                 $("#topk_input_id").attr("Disabled", "Disabled")
                 $("#fold_num_input_id").attr("Disabled", "Disabled")
+                $("#epoch_input_id").attr("Disabled", "Disabled")
                 $("#test_size_input_id").attr("Disabled", "Disabled")
                 $("#val_size_input_id").attr("Disabled", "Disabled")
                 $("#cand_num_input_id").attr("Disabled", "Disabled")
@@ -12638,8 +12683,8 @@ jQuery(window).on("load", function(){
                         fair_rec_string = fair_rec_string + " --prepro=" + $("#preprocess_number_input_id").val().toString() + $("#preprocess_selector_id").val().toString()
                     }
                     fair_rec_string = fair_rec_string + " --topk=" + $("#topk_input_id").val().toString()
-                    if ($("#fold_num_input_id").val().toString() != "") {
-                        fair_rec_string = fair_rec_string + " --fold_num=" + $("#fold_num_input_id").val().toString()
+                    if ($("#epoch_input_id").val().toString() != "") {
+                        fair_rec_string = fair_rec_string + " --epoch=" + $("#epoch_input_id").val().toString()
                     }
                     if ($("#test_size_input_id").val().toString() != "") {
                         fair_rec_string = fair_rec_string + " --test_size=" + $("#test_size_input_id").val().toString()
@@ -12658,16 +12703,22 @@ jQuery(window).on("load", function(){
                         fair_rec_string = fair_rec_string + " --optimizer=" + $("#optimizer_selector_id").val().toString()
                     }
                     if ($("#early_stop_selector_id").val() != null) {
-                        fair_rec_string = fair_rec_string + " --early_stop=" + $("#early_stop_selector_id").val().toString()
+                        if ($("#early_stop_selector_id").val() == "True") {
+                            fair_rec_string = fair_rec_string
+                        } else if ($("#early_stop_selector_id").val() == "False") {
+                            fair_rec_string = fair_rec_string + " --early_stop"
+                        }
                     }
                     if ($("#loss_type_selector_id").val() != null) {
                         fair_rec_string = fair_rec_string + " --loss_type=" + $("#loss_type_selector_id").val().toString()
                     }
                     fair_rec_string = fair_rec_string + " --test_method=" + $("#test_method_selector_id").val().toString()
                     fair_rec_string = fair_rec_string + " --val_method=" + $("#val_method_selector_id").val().toString()
-                    fair_rec_string = fair_rec_string + " --sample_method=" + $("#sample_method_selector_id").val().toString()
+                    if ($("#sample_method_selector_id").val() != null) {
+                        fair_rec_string = fair_rec_string + " --sample_method=" + $("#sample_method_selector_id").val().toString()
+                    }
                     if ($("#sample_ratio_input_id").val().toString() != "") {
-                        fair_rec_string = fair_rec_string + " --sample_ratio=" + $("#sample_ratio_inpu_id").val().toString()
+                        fair_rec_string = fair_rec_string + " --sample_ratio=" + $("#sample_ratio_input_id").val().toString()
                     }
 
                     if($("#batch_size_group_id").is(":visible")) {
@@ -12742,6 +12793,9 @@ jQuery(window).on("load", function(){
                     if ($("#fold_num_input_id").val().toString() != "") {
                         fair_hpo_string = fair_hpo_string + " --fold_num=" + $("#fold_num_input_id").val().toString()
                     }
+                    if ($("#epoch_input_id").val().toString() != "") {
+                        fair_hpo_string = fair_hpo_string + " --epoch=" + $("#epoch_input_id").val().toString()
+                    }
                     if ($("#test_size_input_id").val().toString() != "") {
                         fair_hpo_string = fair_hpo_string + " --test_size=" + $("#test_size_input_id").val().toString()
                     }
@@ -12759,7 +12813,11 @@ jQuery(window).on("load", function(){
                         fair_hpo_string = fair_hpo_string + " --optimizer=" + $("#optimizer_selector_id").val().toString()
                     }
                     if ($("#early_stop_selector_id").val() != null) {
-                        fair_hpo_string = fair_hpo_string + " --early_stop=" + $("#early_stop_selector_id").val().toString()
+                        if ($("#early_stop_selector_id").val() == "True") {
+                            fair_hpo_string = fair_hpo_string
+                        } else if ($("#early_stop_selector_id").val() == "False") {
+                            fair_hpo_string = fair_hpo_string + " --early_stop"
+                        }
                     }
                     if ($("#loss_type_selector_id").val() != null) {
                         fair_hpo_string = fair_hpo_string + " --loss_type=" + $("#loss_type_selector_id").val().toString()
@@ -13026,7 +13084,7 @@ jQuery(window).on("load", function(){
                         }
                     }
 
-                    tune_pack_string = "--tune_pack={"
+                    tune_pack_string = "--tune_pack='{"
                     var is_first_flag = true
                     if ($("#batch_size_checkbox_id")[0].checked) {
                         if (is_first_flag) {
@@ -13173,7 +13231,7 @@ jQuery(window).on("load", function(){
                         }
                     }
 
-                    fair_hpo_string = fair_hpo_string + " " + tune_pack_string + "}"
+                    fair_hpo_string = fair_hpo_string + " " + tune_pack_string + "}'"
 
                     $("#textarea_id").val(fair_hpo_string)
                 }
@@ -13211,6 +13269,8 @@ jQuery(window).on("load", function(){
                 $("#topk_warning_id").hide()
             $("#fold_num_input_id").attr("Disabled", "Disabled")
                 $("#fold_num_warning_id").hide()
+            $("#epoch_input_id").attr("Disabled", "Disabled")
+                $("#epoch_warning_id").hide()
             $("#cand_num_input_id").attr("Disabled", "Disabled")
                 $("#cand_num_warning_id").hide()
             $("#sample_ratio_input_id").attr("Disabled", "Disabled")
