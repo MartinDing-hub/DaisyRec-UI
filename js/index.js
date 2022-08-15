@@ -12686,7 +12686,7 @@ jQuery(window).on("load", function(){
                     }
                     fair_rec_string = fair_rec_string + " --topk=" + $("#topk_input_id").val().toString()
                     if ($("#epoch_input_id").val().toString() != "") {
-                        fair_rec_string = fair_rec_string + " --epoch=" + $("#epoch_input_id").val().toString()
+                        fair_rec_string = fair_rec_string + " --epochs=" + $("#epoch_input_id").val().toString()
                     }
                     if ($("#test_size_input_id").val().toString() != "") {
                         fair_rec_string = fair_rec_string + " --test_size=" + $("#test_size_input_id").val().toString()
@@ -12796,7 +12796,7 @@ jQuery(window).on("load", function(){
                         fair_hpo_string = fair_hpo_string + " --fold_num=" + $("#fold_num_input_id").val().toString()
                     }
                     if ($("#epoch_input_id").val().toString() != "") {
-                        fair_hpo_string = fair_hpo_string + " --epoch=" + $("#epoch_input_id").val().toString()
+                        fair_hpo_string = fair_hpo_string + " --epochs=" + $("#epoch_input_id").val().toString()
                     }
                     if ($("#test_size_input_id").val().toString() != "") {
                         fair_hpo_string = fair_hpo_string + " --test_size=" + $("#test_size_input_id").val().toString()
